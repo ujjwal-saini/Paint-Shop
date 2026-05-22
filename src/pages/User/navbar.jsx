@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
-import {
-  Heart,
-  ShoppingCart,
-  User,
-  Search,
-  ChevronDown,
-  Menu,
-  X,
-  MapPin,
-} from "lucide-react";
+import { Heart, ShoppingCart, User, Search, ChevronDown, Menu, X, MapPin, UserCircle2, Package, HeartHandshake, LogOut, } from "lucide-react";
 
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa6";
 
 import logo2 from "../../assets/logo2.png";
+import Login from "../Auth/login";
+import Signup from "../Auth/signup";
 
 function Navbar() {
   const [openMenu, setOpenmenu] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openSignup, setOpenSignup] = useState(false);
 
+  console.log(openLogin);
   useEffect(() => {
     document.body.style.overflow = openMenu ? "hidden" : "auto";
   }, [openMenu]);
@@ -65,21 +61,84 @@ function Navbar() {
 
             <div className="flex items-center gap-3 lg:gap-5">
 
-              <button className="hidden sm:block hover:text-red-500 transition">
+              <Link to='/wishlist' className="hidden sm:block hover:text-red-500 transition">
                 <Heart />
-              </button>
+              </Link>
 
-              <button className="relative hover:text-purple-600 transition">
+              <Link to='/addtocart' className="relative hover:text-purple-600 transition">
                 <ShoppingCart />
-
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] h-5 w-5 rounded-full flex items-center justify-center">
                   2
                 </span>
-              </button>
+              </Link>
 
-              <button className="hidden md:block hover:text-purple-600 transition">
-                <User />
-              </button>
+              <div className="relative hidden md:block group">
+
+                <button className="hover:text-purple-600 transition flex items-center gap-1">
+                  <User />
+                  <ChevronDown size={16} />
+                </button>
+
+                <div className="absolute top-10 right-0 w-[260px] bg-white rounded-3xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+                  <div className="p-5 border-b border-gray-100">
+
+                    <div className="flex items-center justify-between">
+
+                      <div>
+                        <h3 className="font-semibold text-gray-800">
+                          Welcome
+                        </h3>
+
+                        <p className="text-sm text-gray-500">
+                          Access your account
+                        </p>
+                      </div>
+
+                      <button onClick={() => setOpenLogin(true)} className="text-purple-600 cursor-pointer font-semibold text-sm">
+                        Login
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                  <div className="py-2">
+
+                    <Link to='profile' className="w-full flex items-center gap-3 px-5 py-3 hover:bg-gray-200 transition text-gray-700">
+                      <UserCircle2 size={20} />
+                      My Profile
+                    </Link>
+
+                    <Link to='orders' className="w-full flex items-center gap-3 px-5 py-3 hover:bg-gray-200 transition text-gray-700">
+                      <Package size={20} />
+                      Orders
+                    </Link>
+
+                    <Link to='wishlist' className="w-full flex items-center gap-3 px-5 py-3 hover:bg-gray-200 transition text-gray-700">
+                      <HeartHandshake size={20} />
+                      Wishlist
+                    </Link>
+
+                    <Link to='address' className="w-full flex items-center gap-3 px-5 py-3 hover:bg-gray-200 transition text-gray-700">
+                      <MapPin size={20} />
+                      Saved Address
+                    </Link>
+
+                  </div>
+
+                  <div className="border-t border-gray-100 p-2">
+
+                    <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-gray-200 cursor-pointer text-red-500 transition">
+                      <LogOut size={20} />
+                      Logout
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
 
               <a
                 href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7"
@@ -216,6 +275,7 @@ function Navbar() {
                 className="h-10 object-contain"
               />
 
+
               <button onClick={() => setOpenmenu(false)}>
                 <X size={30} />
               </button>
@@ -269,6 +329,26 @@ function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* LOGIN MODAL */}
+      {openLogin && (
+        <Login
+          closeModal={() => setOpenLogin(false)}
+          openSignup={() => {
+            setOpenLogin(false);
+            setOpenSignup(true);
+          }}
+        />
+      )}
+
+      {openSignup && (
+        <Signup
+          closeModal={() => setOpenSignup(false)}
+          openLogin={() => {
+            setOpenSignup(false);
+            setOpenLogin(true);
+          }}
+        />
+      )}
     </>
   );
 }

@@ -39,7 +39,7 @@ function Profile() {
               </p>
 
               <h1 className="text-3xl sm:text-5xl font-bold">
-                Mohd Faizan
+                Ujjwal Saini
               </h1>
 
               <p className="mt-4 text-gray-200 text-sm sm:text-lg leading-7">
@@ -192,7 +192,7 @@ function Profile() {
                   </div>
 
                   <h3 className="text-lg font-bold text-gray-800">
-                    Mohd Faizan
+                    Ujjwal Saini
                   </h3>
 
                 </div>
@@ -210,7 +210,7 @@ function Profile() {
                   </div>
 
                   <h3 className="text-lg font-bold text-gray-800 break-all">
-                    faizan@gmail.com
+                    ujjwalsaini073@gmail.com
                   </h3>
 
                 </div>

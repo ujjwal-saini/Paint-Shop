@@ -13,6 +13,8 @@ import Offer from './pages/User/offer'
 import Contact from './components/contact'
 import Shop from './pages/User/shop'
 import Profile from './components/profile'
+import Wishlist from './pages/User/wishlist'
+import Addtocart from './pages/User/addtocart'
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
           <Route path='contact' element={<Contact />} />
           <Route path='shop' element={<Shop />} />
           <Route path='profile' element={<Profile />} />
+          <Route path='wishlist' element={<Wishlist />} />
+          <Route path='addtocart' element={<Addtocart />} />
         </Route>
 
       </Routes>
