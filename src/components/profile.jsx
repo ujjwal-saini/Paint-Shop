@@ -79,7 +79,7 @@ function Profile() {
 
         <div className="grid lg:grid-cols-4 gap-6">
 
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 hidden lg:block">
 
             <div className="bg-white rounded-[30px] shadow-xl p-6 sticky top-24">
 
