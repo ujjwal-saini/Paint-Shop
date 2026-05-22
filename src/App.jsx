@@ -8,6 +8,9 @@ import PaintCalculotorpage from './pages/User/paintCalculotorpage'
 import BrandPage from './pages/User/brandPage'
 
 import Card from './pages/User/card'
+import Colorpreview from './pages/User/colorpreview'
+import Offer from './pages/User/offer'
+import Contact from './components/contact'
 
 function App() {
   return (
@@ -29,11 +32,10 @@ function App() {
             <Route path='waterproofing' element={<h1>Waterproofing</h1>} />
           </Route>
 
-          <Route
-            path='brands'
-            element={<BrandPage />}
-          />
-
+          <Route path='brands' element={<BrandPage />} />
+          <Route path="colorpreview" element={<Colorpreview />} />
+          <Route path='offers' element={<Offer />} />
+          <Route path='contact' element={<Contact />} />
         </Route>
 
       </Routes>

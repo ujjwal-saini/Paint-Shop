@@ -26,7 +26,7 @@ function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Brands", path: "/brands" },
-    { name: "Color Preview", path: "/color-preview" },
+    { name: "Color Preview", path: "/colorpreview" },
     { name: "Paint Calculator", path: "/paintcalculator" },
     { name: "Offers", path: "/offers" },
     { name: "Contact", path: "/contact" },
@@ -179,7 +179,7 @@ function Navbar() {
                 Brands
               </Link>
 
-              <Link to="/color-preview" onClick={() => setOpenmenu(false)}>
+              <Link to="/colorpreview" onClick={() => setOpenmenu(false)}>
                 Color Preview
               </Link>
 

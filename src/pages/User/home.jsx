@@ -7,11 +7,11 @@ function Home() {
   return (
     <div className='w-full min-h-screen overflow-hidden relative'>
 
-      <img src={paintbg} alt="Paint Background" className='w-full h-screen object-cover' />
+      <img src={paintbg} alt="Paint Background" className='w-full h-[80vh] lg:h-screen object-cover' />
 
-      <div className='absolute inset-0 flex items-center'>
+      <div className='absolute inset-0 flex top-20 lg:top-20'>
 
-        <div className='px-6 md:px-12 lg:px-20 max-w-2xl'>
+        <div className='pl-4 pr-2 w-[500px] md:px-3 lg:px-16 max-w-2xl'>
 
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
@@ -54,12 +54,12 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='flex flex-col sm:flex-row gap-4 mt-6 md:mt-8'>
+            className='flex mt-[200px]  sm:flex-row gap-4 mt-6 md:mt-8'>
 
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className='px-6 md:px-8 py-3 md:py-4 rounded-full bg-gradient-to-r from-pink-500 to-blue-600 text-white font-semibold shadow-lg'>
+              className='px-6 py-2 md:px-8 py-3 md:py-4 rounded-full bg-gradient-to-r from-pink-500 to-blue-600 text-white font-semibold shadow-lg'>
               Shop Now
             </motion.button>
 
