@@ -12,6 +12,7 @@ import Colorpreview from './pages/User/colorpreview'
 import Offer from './pages/User/offer'
 import Contact from './components/contact'
 import Shop from './pages/User/shop'
+import Profile from './components/profile'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='offers' element={<Offer />} />
           <Route path='contact' element={<Contact />} />
           <Route path='shop' element={<Shop />} />
+          <Route path='profile' element={<Profile />} />
         </Route>
 
       </Routes>

@@ -21,7 +21,7 @@ function MobileBotNav() {
           <span>WhatsApp</span>
         </Link>
 
-        <Link to={'rpfile'} className="flex flex-col items-center text-sm">
+        <Link to={'profile'} className="flex flex-col items-center text-sm">
           <span>👤</span>
           <span>Profile</span>
         </Link>
