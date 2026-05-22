@@ -11,6 +11,7 @@ import Card from './pages/User/card'
 import Colorpreview from './pages/User/colorpreview'
 import Offer from './pages/User/offer'
 import Contact from './components/contact'
+import Shop from './pages/User/shop'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="colorpreview" element={<Colorpreview />} />
           <Route path='offers' element={<Offer />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='shop' element={<Shop />} />
         </Route>
 
       </Routes>
