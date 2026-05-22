@@ -121,22 +121,19 @@ function Navbar() {
             <div className="relative flex-1">
               <Search
                 size={20}
-                className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400"
-              />
+                className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400" />
 
               <input
                 type="text"
                 placeholder="Search paints..."
-                className="w-full pl-12 pr-3 py-2 rounded-full border border-gray-300 outline-none focus:ring-2 focus:ring-gray-400"
-              />
+                className="w-full pl-12 pr-3 py-2 rounded-full border border-gray-300 outline-none focus:ring-2 focus:ring-gray-400" />
             </div>
 
             <a
               href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 text-white shrink-0"
-            >
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 text-white shrink-0">
               <MapPin size={18} />
             </a>
 
