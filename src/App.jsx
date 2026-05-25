@@ -27,7 +27,7 @@ function App() {
 
           <Route path='paintcalculator' element={<PaintCalculotorpage />} />
 
-          <Route path='products' element={<Products />}>
+          <Route path='categories' element={<Products />}>
             <Route index element={<Card />} />
             <Route path='interior' element={<h1>Interior Paints</h1>} />
             <Route path='exterior' element={<h1>Exterior Paints</h1>} />
