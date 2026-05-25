@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className='w-full  h-[44vh]  lg:h-screen overflow-hidden relative'>
 
-      <img src={paintbg} alt="Paint Background" className='w-full h-[44vh]  lg:h-screen object-cover' />
+      <img src={paintbg} alt="Paint Background" className='w-full h-[44vh]  opacity-90 lg:h-screen object-cover' />
 
       <div className='absolute inset-0 flex top-5  h-[44vh]  lg:top-20'>
 
