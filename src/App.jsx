@@ -15,14 +15,51 @@ import Shop from './pages/User/shop'
 import Profile from './components/profile'
 import Wishlist from './pages/User/wishlist'
 import Addtocart from './pages/User/addtocart'
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <BrowserRouter>
+      <Toaster
+        position={"top-center"}
+        reverseOrder={false}
+        toastOptions={{
+          duration: 3000,
+
+          style: {
+            background: "#111827",
+            color: "#fff",
+            borderRadius: "16px",
+            padding: "12px 16px",
+            fontSize: "14px",
+            fontWeight: "500",
+          },
+
+          success: {
+            style: {
+              background:
+                "linear-gradient(135deg, #7c3aed, #ec4899)",
+            },
+          },
+
+          error: {
+            style: {
+              background:
+                "linear-gradient(135deg, #ef4444, #f97316)",
+            },
+          },
+
+          loading: {
+            style: {
+              background:
+                "linear-gradient(135deg, #2563eb, #06b6d4)",
+            },
+          },
+        }}
+      />
       <Routes>
 
         <Route path='/' element={<Landing />}>
-
           <Route index element={<Main />} />
 
           <Route path='paintcalculator' element={<PaintCalculotorpage />} />

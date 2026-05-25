@@ -56,7 +56,7 @@ function Navbar() {
       <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
 
         <TopOffer />
-        <div className="max-w-[1500px] mx-auto px-3 sm:px-4 lg:px-8">
+        <motion.div className="max-w-[1500px] mx-auto px-3 sm:px-4 lg:px-8">
           <div className="h-[72px] md:h-[78px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-2 md:gap-4 lg:gap-8 flex-1">
               <button onClick={() => setOpenmenu(true)}
@@ -277,62 +277,98 @@ function Navbar() {
 
 
           {/* MOBILE SEARCH */}
+          {/* MAIN CONTAINER */}
           <AnimatePresence>
+
             {ShowSearch && (
+
               <motion.div
+
                 initial={{
                   opacity: 0,
-                  y: -30,
-                  scale: 0.95,
+                  height: 0,
+                  y: -25,
                 }}
+
                 animate={{
                   opacity: 1,
+                  height: "auto",
                   y: 0,
-                  scale: 1,
                 }}
+
                 exit={{
                   opacity: 0,
-                  y: -30,
-                  scale: 0.95,
+                  height: 0,
+                  y: -25,
                 }}
+
                 transition={{
-                  duration: 0.35,
-                  ease: "easeOut",
+                  duration: 0.45,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
-                className="md:hidden pb-4"
+
+                className="md:hidden overflow-hidden"
               >
 
-                <div className="relative">
+                {/* SEARCH WRAPPER */}
+                <motion.div
 
-                  {/* ICON */}
-                  <Search
-                    size={18}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
+                  initial={{
+                    scale: 0.95,
+                    opacity: 0,
+                  }}
 
-                  {/* INPUT */}
-                  <input
-                    type="text"
-                    placeholder="Search paints..."
-                    className="w-full h-[48px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-12 pr-12 text-sm shadow-sm"
-                  />
+                  animate={{
+                    scale: 1,
+                    opacity: 1,
+                  }}
 
-                  {/* CLOSE BUTTON */}
-                  <button
-                    onClick={() => setShowSearch(false)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center"
-                  >
-                    <X size={15} />
-                  </button>
+                  exit={{
+                    scale: 0.95,
+                    opacity: 0,
+                  }}
 
-                </div>
+                  transition={{
+                    delay: 0.1,
+                    duration: 0.35,
+                  }}
+
+                  className="pb-4 pt-1"
+                >
+
+                  <div className="relative">
+
+                    {/* ICON */}
+                    <Search
+                      size={18}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                    />
+
+                    {/* INPUT */}
+                    <input
+                      type="text"
+                      placeholder="Search paints..."
+                      className="w-full h-[48px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-12 pr-12 text-sm shadow-sm"
+                    />
+
+                    {/* CLOSE */}
+                    <button
+                      onClick={() => setShowSearch(false)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center"
+                    >
+                      <X size={15} />
+                    </button>
+
+                  </div>
+
+                </motion.div>
+
               </motion.div>
 
             )}
 
           </AnimatePresence>
-
-        </div>
+        </motion.div>
       </header>
 
       <div className="h-[130px]" />
