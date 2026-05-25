@@ -116,7 +116,7 @@ function TopOffer() {
 
             <div className="flex items-center gap-2">
               <Phone size={16} className="text-orange-500" />
-              <p>+91 12345 67890</p>
+              <p>+91 93684 77303</p>
             </div>
           </div>
         </div>

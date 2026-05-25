@@ -3,13 +3,14 @@ import paintbg from '../../assets/paintbg.png'
 import { motion } from "framer-motion";
 
 function Home() {
-  console.log(paintbg)
+
+
   return (
     <div className='w-full  h-[44vh]  lg:h-screen overflow-hidden relative'>
 
       <img src={paintbg} alt="Paint Background" className='w-full h-[44vh]  lg:h-screen object-cover' />
 
-      <div className='absolute inset-0 flex top-1 h-[44vh]  lg:top-20'>
+      <div className='absolute inset-0 flex top-5  h-[44vh]  lg:top-20'>
 
         <div className='pl-4 pr-[50px] w-[500px] h-[40vh]  md:px-3 lg:px-16 max-w-2xl'>
 
@@ -22,7 +23,6 @@ function Home() {
             Bring Your Walls
             <br />
             to Life with{" "}
-
             <motion.span
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -32,8 +32,7 @@ function Home() {
                 delay: 0.2
               }}
               viewport={{ once: false }}
-              className='text-pink-500 inline-block'
-            >
+              className='text-pink-500 inline-block'>
               Colors
             </motion.span>
           </motion.h1>
@@ -43,8 +42,7 @@ function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-800 font-bold max-w-lg'
-          >
+            className='mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-800 font-bold max-w-lg'>
             Premium paints for every surface.
             Beautiful colors. Long lasting results.
           </motion.p>
