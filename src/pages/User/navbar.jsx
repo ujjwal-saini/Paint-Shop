@@ -53,10 +53,10 @@ function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
-
+      <header className={`fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm 
+         ${ShowSearch ? "rounded-b-3xl" : ""}`}>
         <TopOffer />
-        <motion.div className="max-w-[1500px] mx-auto px-3 sm:px-4 lg:px-8">
+        <motion.div className="max-w-[1500px] mx-auto px-3 sm:px-4 lg:px-8 ">
           <div className="h-[72px] md:h-[78px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-2 md:gap-4 lg:gap-8 flex-1">
               <button onClick={() => setOpenmenu(true)}
@@ -277,7 +277,7 @@ function Navbar() {
 
 
           {/* MOBILE SEARCH */}
-          {/* MAIN CONTAINER */}
+
           <AnimatePresence>
 
             {ShowSearch && (
@@ -348,7 +348,7 @@ function Navbar() {
                     <input
                       type="text"
                       placeholder="Search paints..."
-                      className="w-full h-[48px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-12 pr-12 text-sm shadow-sm"
+                      className="w-full h-[40px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-12 pr-12 text-sm shadow-sm"
                     />
 
                     {/* CLOSE */}
