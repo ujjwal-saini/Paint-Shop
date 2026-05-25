@@ -48,11 +48,11 @@ function Home() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='flex   sm:flex-row gap-4 mt-6 md:mt-8'>
+            className='flex sm:flex-row gap-4 mt-6 md:mt-3'>
 
             <motion.button
               whileHover={{ scale: 1.1 }}
