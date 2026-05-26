@@ -1,34 +1,133 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  House,
+  Store,
+  MessageCircleMore,
+  Heart,
+  User,
+} from "lucide-react";
 
 function MobileBotNav() {
+  const location = useLocation();
+
+  const navItems = [
+    {
+      name: "Home",
+      path: "/",
+      icon: House,
+    },
+    {
+      name: "Shop",
+      path: "/shop",
+      icon: Store,
+    },
+    {
+      name: "Wishlist",
+      path: "/wishlist",
+      icon: Heart,
+    },
+    {
+      name: "Account",
+      path: "/profile",
+      icon: User,
+    },
+  ];
+
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md sm:hidden z-50">
-      <div className="flex items-center justify-around py-3">
+    <div className="sm:hidden fixed bottom-0 left-0 w-full z-50">
 
-        <Link to={'/'} className="flex flex-col items-center text-sm">
-          <span>🏠</span>
-          <span>Home</span>
+      {/* Bottom Nav */}
+      <div className="relative bg-white border-t border-gray-200 shadow-[0_-5px_20px_rgba(0,0,0,0.08)] px-2 py-2 flex items-center justify-between">
+
+        {/* Left Items */}
+        <div className="flex items-center justify-around w-[40%]">
+          {navItems.slice(0, 2).map((item, index) => {
+            const isActive = location.pathname === item.path;
+            const Icon = item.icon;
+
+            return (
+              <Link
+                key={index}
+                to={item.path}
+                className={`flex flex-col items-center text-xs font-medium transition-all duration-200 ${isActive ? "text-orange-500" : "text-gray-500"
+                  }`}
+              >
+                <div
+                  className={`p-2 rounded-xl ${isActive ? "bg-orange-100" : ""
+                    }`}
+                >
+                  <Icon size={22} strokeWidth={2.2} />
+                </div>
+
+                <span>{item.name}</span>
+
+                {isActive && (
+                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1"></div>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Empty Center Space */}
+        <div className="w-[20%]"></div>
+
+        {/* Right Items */}
+        <div className="flex items-center justify-around w-[40%]">
+          {navItems.slice(2).map((item, index) => {
+            const isActive = location.pathname === item.path;
+            const Icon = item.icon;
+
+            return (
+              <Link
+                key={index}
+                to={item.path}
+                className={`flex flex-col items-center text-xs font-medium transition-all duration-200 ${isActive ? "text-orange-500" : "text-gray-500"
+                  }`}
+              >
+                <div
+                  className={`p-2 rounded-xl ${isActive ? "bg-orange-100" : ""
+                    }`}
+                >
+                  <Icon size={22} strokeWidth={2.2} />
+                </div>
+
+                <span>{item.name}</span>
+
+                {isActive && (
+                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1"></div>
+                )}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Floating Chat Button */}
+        <Link
+          to="/chat"
+          className="absolute left-1/2 -translate-x-1/2 -top-2"
+        >
+          <div className="relative">
+
+            {/* Notification */}
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] min-w-[18px] h-[18px] flex items-center justify-center rounded-full border-2 border-white">
+              2
+            </span>
+
+            {/* Main Button */}
+            <div className="w-16 h-16 rounded-full bg-orange-500 shadow-lg flex items-center justify-center border-4 border-white transition-all duration-300 active:scale-95">
+              <MessageCircleMore
+                size={30}
+                color="white"
+                strokeWidth={2.5}
+              />
+            </div>
+          </div>
         </Link>
-
-        <Link to={'shop'} className="flex flex-col items-center text-sm">
-          <span>🛍️</span>
-          <span>Shop</span>
-        </Link>
-
-        <Link to={'whatapp'} className="flex flex-col items-center text-sm">
-          <span>💬</span>
-          <span>WhatsApp</span>
-        </Link>
-
-        <Link to={'profile'} className="flex flex-col items-center text-sm">
-          <span>👤</span>
-          <span>Profile</span>
-        </Link>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default MobileBotNav
+export default MobileBotNav;
