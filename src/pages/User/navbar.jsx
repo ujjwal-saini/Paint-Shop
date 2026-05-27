@@ -64,7 +64,6 @@ function Navbar() {
                 <Menu size={22} />
               </button>
 
-
               <Link to="/" className="flex items-center   shrink-0">
                 <img src={websitelogo} alt="logo" className="h-10 sm:h-11 md:h-12 w-auto object-contain" />
                 <div className="flex flex-col leading-none">
@@ -90,43 +89,32 @@ function Navbar() {
                         className="relative group">
                         <Link to={link.path} className="flex items-center gap-1 text-[14px] font-semibold text-gray-800 hover:text-purple-600 transition">
                           {link.name}
-
                           <ChevronDown
                             size={16}
-                            className="group-hover:rotate-180 transition duration-300"
-                          />
-
+                            className="group-hover:rotate-180 transition duration-300" />
                         </Link>
-
                         {/* DROPDOWN */}
                         <div className="absolute top-10 left-0 w-[270px] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                           <div className="grid gap-3">
                             {link.items.map((item) => (
-                              <button
-                                key={item}
+                              <Link to={`${link.name}/${item.toLowerCase().replace(/\s+/g, "")}`} key={item}
                                 className="text-left px-4 py-3 rounded-2xl hover:bg-purple-50 hover:text-purple-600 transition font-medium">
                                 {item}
-                              </button>
+                              </Link>
                             ))}
                           </div>
                         </div>
                       </div>
-
                     ) : (
                       <NavLink
                         key={link.name}
                         to={link.path}
-                        className={({ isActive }) =>
-                          `text-[14px] font-semibold transition ${isActive
-                            ? "text-purple-600"
-                            : "text-gray-800 hover:text-purple-600"
-                          }`
-                        }>
+                        className={({ isActive }) => `text-[14px] font-semibold transition ${isActive
+                          ? "text-purple-600" : "text-gray-800 hover:text-purple-600"}`}>
                         {link.name}
                       </NavLink>)
                   ))}
                 </div>
-
               </div>
             </div>
 
@@ -135,7 +123,6 @@ function Navbar() {
               <Search
                 size={20}
                 className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400" />
-
               <input type="text" placeholder="Search for paints, products..."
                 className="w-full h-[43px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-5 pr-5 text-sm" />
             </div>
@@ -146,47 +133,28 @@ function Navbar() {
               <button onClick={() => { setShowSearch(!ShowSearch) }} className="md:hidden w-10 h-10 rounded-2xl bg-gray-100 flex items-center justify-center">
                 <Search size={20} />
               </button>
-
               {/* MAP */}
-              <a
-                href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative hidden 2xl:flex items-center justify-center w-[48px] h-[48px] rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg group"
-              >
+              <a href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7" target="_blank" rel="noopener noreferrer"
+                className="relative hidden 2xl:flex items-center justify-center w-[48px] h-[48px] rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg group">
 
                 {/* ICON */}
-                <MapPin
-                  size={18}
-                  className="shrink-0"
-                />
+                <MapPin size={18} className="shrink-0" />
 
-                {/* TOOLTIP */}
+                {/* TOOL TIP */}
                 <span className="absolute -top-11 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-3 py-2 rounded-xl opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 whitespace-nowrap">
-
                   Visit Store
-
-                  {/* ARROW */}
                   <span className="absolute left-1/2 -translate-x-1/2 top-full border-8 border-transparent border-t-black"></span>
-
                 </span>
-
               </a>
 
               {/* WHATSAPP */}
-              <a
-                href="https://wa.me/919368477303"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:flex items-center justify-center w-[45px] h-[45px] md:w-[48px] md:h-[48px] rounded-full bg-green-500 text-white shadow-lg hover:scale-105 transition"
-              >
+              <a href="https://wa.me/919368477303" target="_blank" rel="noopener noreferrer"
+                className="hidden sm:flex items-center justify-center w-[45px] h-[45px] md:w-[48px] md:h-[48px] rounded-full bg-green-500 text-white shadow-lg hover:scale-105 transition">
                 <FaWhatsapp className="text-[22px]" />
               </a>
 
-              <Link
-                to="/addtocart"
-                className="relative w-[42px] h-[42px] md:w-[48px] md:h-[48px] rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition"
-              >
+              <Link to="/addtocart"
+                className="relative w-[42px] h-[42px] md:w-[48px] md:h-[48px] rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition">
                 <ShoppingCart size={20} />
 
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] h-5 w-5 rounded-full flex items-center justify-center font-bold">
@@ -206,27 +174,20 @@ function Navbar() {
 
                   {/* TOP */}
                   <div className="p-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-
                     <h3 className="text-lg font-bold">
                       Welcome Back
                     </h3>
-
                     <p className="text-sm opacity-90 mt-1">
                       Access your account
                     </p>
-
                     <button
                       onClick={() => setOpenLogin(true)}
-                      className="mt-4 bg-white text-purple-600 px-5 py-2 rounded-full font-semibold text-sm hover:scale-105 transition"
-                    >
+                      className="mt-4 bg-white text-purple-600 px-5 py-2 rounded-full font-semibold text-sm hover:scale-105 transition">
                       Login
                     </button>
-
                   </div>
-
                   {/* LINKS */}
                   <div className="p-3">
-
                     {[
                       {
                         icon: <UserCircle2 size={20} />,
