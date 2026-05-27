@@ -1,5 +1,6 @@
 import React from 'react'
 import paintbg from '../../assets/paintbg.png'
+import bg1 from '../../assets/bg1.png'
 import { motion } from "framer-motion";
 import { ShieldCheck, Truck, Headphones } from "lucide-react";
 import Navbar from './navbar';
@@ -7,7 +8,7 @@ import Navbar from './navbar';
 function Home() {
   return (
     <div className='w-full  h-[44vh]  lg:h-screen overflow-hidden relative'>
-      <img src={paintbg} alt="Paint Background" className='w-full h-[30vh]  opacity-90 lg:h-screen object-cover' />
+      <img src={bg1} alt="Paint Background" className='w-full h-[30vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
       <div className='absolute inset-0 flex top-1  h-[44vh]  lg:top-2'>
         <div className='pl-4 pr-[10%] w-[500px] h-[40vh]  md:px-3 lg:px-16 max-w-2xl'>
           <motion.span className='text-[10px]  text-purple-600 bg-purple-200 py-1 px-2 rounded '> AI Powered</motion.span>
@@ -38,7 +39,7 @@ function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='mt-2 mr-[50%] md:mt-6 text-[11px] sm:text-base  md:text-lg lg:mr-0 lg:flex text-gray-600  max-w-lg'>
+            className='mt-2 mr-[50%] md:mt-6 text-[10px] sm:text-base  md:text-lg lg:mr-0 lg:flex text-gray-600  max-w-lg'>
             Premium paints for every surface.
             Beautiful colors. Long lasting results.
           </motion.p>
@@ -47,7 +48,7 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='flex my-2 sm:flex-row gap-2 lg:gap-4 lg:mt-6 md:mt-3 lg:mb-10'>
+            className='flex my-3 sm:flex-row gap-2 lg:gap-4 lg:mt-6 md:mt-3 lg:mb-10'>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -58,7 +59,7 @@ function Home() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className='text-[10px] sm:text-[13px] md:text-[15px] lg:text-[16px] px-4 py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-[10px]  bg-purple-600 text-white font-semibold shadow-lg' >
+              className='text-[10px] sm:text-[13px] md:text-[15px] lg:text-[16px] px-4 py-[9px] sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-[10px]  bg-purple-600 text-white font-semibold shadow-lg' >
               Try Color Preview
             </motion.button>
           </motion.div>
