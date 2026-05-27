@@ -42,33 +42,48 @@ function Category() {
   ];
 
   return (
-    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-5'>
+    <div className='
+flex 
+overflow-x-auto
+overflow-y-hidden
+gap-4 
+pb-2 
+scroll-smooth 
+custom-scroll
+'>
 
       {categories.map((item, index) => (
         <motion.div
           key={item.id}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.15 }}
-          viewport={{ once: false }}
-          whileHover={{ scale: 1.06, y: -8 }}
-          className='bg-[#f8f8fb] rounded-2xl p-5 flex flex-col shadow-xl items-center justify-between hover:shadow-xl duration-300 cursor-pointer overflow-hidden'>
+          transition={{ duration: 0.4, delay: index * 0.05 }}
+          whileHover={{ scale: 1.05 }}
+          className='
+      min-w-[150px]
+      bg-white
+      shadow
+     rounded-[10px]
+      duration-100
+      flex
+      flex-col
+      items-center
+      '
+        >
 
-          <motion.div
-            whileHover={{ rotate: 5, scale: 1.1 }}
-            className='w-40 h-24 flex items-center justify-center'>
+          <div className='w-full h-28 overflow-hidden rounded'>
             <img
               src={item.image}
               alt={item.name}
-              className='w-full h-full object-contain' />
-          </motion.div>
+              className='w-full h-full object-cover'
+            />
+          </div>
 
-          <motion.p whileHover={{ scale: 1.05 }} className='mt-3 text-sm font-semibold text-center leading-5'>
+          <p className='mt-3 text-sm font-semibold text-center text-gray-800'>
             {item.name}
-          </motion.p>
+          </p>
 
         </motion.div>
-
       ))}
 
     </div>

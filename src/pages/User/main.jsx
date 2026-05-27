@@ -36,18 +36,16 @@ function Main() {
 
   return (
     <Fragment>
-
       <Home />
-
       <div className='w-full px-4 md:px-8 lg:px-4 py-8 bg-[#f8f8fb]'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-6'>
           <div className='lg:col-span-9 flex flex-col gap-6'>
-            <div className='bg-white rounded-3xl shadow-sm p-5 md:p-7'>
+            <div className='p-1 md:p-7'>
               <div className='flex items-center justify-between mb-6'>
-                <h2 className='text-2xl font-bold text-gray-800'>
+                <h2 className='text-[14px]  font-bold text-gray-800 lg:text-[20px]'>
                   Shop By Category
                 </h2>
-                <Link to="/" className='text-blue-600 font-semibold'>
+                <Link to="/" className=' text-[14px] text-blue-600 font-semibold lg:text-[16px]'>
                   View All
                 </Link>
               </div>

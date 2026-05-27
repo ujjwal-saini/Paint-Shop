@@ -7,10 +7,10 @@ import Navbar from './navbar';
 
 function Home() {
   return (
-    <div className='w-full  h-[44vh]  lg:h-screen overflow-hidden relative'>
+    <div className='w-full lg:h-auto overflow-hidden relative'>
       <img src={bg1} alt="Paint Background" className='w-full h-[30vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
-      <div className='absolute inset-0 flex top-1  h-[44vh]  lg:top-2'>
-        <div className='pl-4 pr-[10%] w-[500px] h-[40vh]  md:px-3 lg:px-16 max-w-2xl'>
+      <div className='absolute inset-0 flex top-1    lg:top-2'>
+        <div className='pl-4 pr-[10%] w-[500px] md:px-3 lg:px-16 max-w-2xl'>
           <motion.span className='text-[10px]  text-purple-600 bg-purple-200 py-1 px-2 rounded '> AI Powered</motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 100 }}

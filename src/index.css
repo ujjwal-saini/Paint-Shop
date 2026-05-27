@@ -5,3 +5,12 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
+
+/*  ye right side scrol bar on category */
+.custom-scroll::-webkit-scrollbar {
+  height: 1px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
