@@ -53,12 +53,8 @@ custom-scroll
 '>
 
       {categories.map((item, index) => (
-        <motion.div
+        <div
           key={item.id}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.05 }}
-          whileHover={{ scale: 1.05 }}
           className='
       min-w-[150px]
       bg-white
@@ -83,7 +79,7 @@ custom-scroll
             {item.name}
           </p>
 
-        </motion.div>
+        </div>
       ))}
 
     </div>

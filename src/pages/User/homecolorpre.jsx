@@ -56,48 +56,48 @@ export default function AIColorPreview() {
 
   return (
     <>
-      <section className="w-full max-w-8xl mx-auto bg-white rounded-[32px] p-4 md:p-6 shadow border border-gray-100">
+      <section className="w-full mt-8 max-w-8xl mx-auto bg-white p-4 md:p-6">
 
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div className="flex  md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
-            <div className="flex items-center gap-3">
-              <h2 className="text-2xl md:text-3xl font-bold">
+            <div className="flex  items-center gap-3">
+              <h2 className="text-[18px] lg:text-2xl md:text-3xl font-bold">
                 Color Preview
               </h2>
 
-              <span className="bg-violet-600 text-white text-xs px-3 py-1 rounded-full">
+              <span className="bg-violet-600 text-white text-[12px] lg:text-xs px-2 lg:px-3 py-1 rounded-full">
                 New
               </span>
             </div>
 
-            <p className="text-gray-500 mt-2">
+            <p className="text-gray-500 text-[13px]  lg:text-sm mt-2">
               Upload your room photo and try colors instantly
             </p>
           </div>
 
-          <Link to="Features/colorpreview" className="text-violet-600 font-semibold">
+          <Link to="Features/colorpreview" className="text-violet-600 font-semibold text-sm lg:text-md">
             View All
           </Link>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-5">
 
-          <div className="w-full lg:w-[230px] shrink-0">
-            <label className="border-2 border-dashed border-gray-200 rounded-3xl h-[190px] flex flex-col items-center justify-center cursor-pointer hover:border-violet-400 transition">
+          <div className="w-full flex justify-center lg:block lg:w-[230px] shrink-0">
+            <label className="border-2 border-dashed border-gray-200 rounded-3xl w-full py-2 lg:py-5  lg:h-[190px] flex flex-col items-center justify-center cursor-pointer hover:border-violet-400 transition">
               <Upload
                 size={38}
-                className="text-violet-600"
+                className="text-violet-600 h-5 lg:h-10"
               />
 
-              <h4 className="font-semibold mt-3">
+              <h4 className="font-semibold  text-[12px] lg:text-md  mt-1 lg:mt-3">
                 Upload Room Image
               </h4>
 
-              <p className="text-xs text-gray-500">
+              <p className="text-[10px] lg:text-xs text-gray-500">
                 JPG, PNG (Max 5MB)
               </p>
 
-              <div className="mt-3 bg-violet-600 text-white px-4 py-2 rounded-xl text-sm">
+              <div className="mt-2 lg:mt-3 bg-violet-600 px-3 py-1 text-white lg:px-4 lg:py-2 text-[10px] rounded-xl lg:text-sm">
                 Upload Image
               </div>
 
@@ -114,7 +114,7 @@ export default function AIColorPreview() {
 
             <button
               onClick={scrollLeft}
-              className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full w-11 h-11 items-center justify-center"
+              className="flex items-center absolute -left-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full w-9 h-9 items-center justify-center"
             >
               <ChevronLeft size={18} />
             </button>
@@ -129,7 +129,7 @@ export default function AIColorPreview() {
                   onClick={() =>
                     setPreviewImage(item)
                   }
-                  className="flex-shrink-0 min-w-[180px] sm:min-w-[220px] lg:min-w-[260px] text-left"
+                  className="flex-shrink-0 min-w-[180px] sm:min-w-[220px] lg:min-w-[260px] text-left hover:shadow"
                 >
                   <div className="relative h-[120px] sm:h-[140px] lg:h-[160px] rounded-2xl overflow-hidden">
                     <img
@@ -157,7 +157,7 @@ export default function AIColorPreview() {
 
             <button
               onClick={scrollRight}
-              className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full w-11 h-11 items-center justify-center"
+              className="flex items-center absolute -right-2 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg rounded-full w-9 h-9 items-center justify-center"
             >
               <ChevronRight size={18} />
             </button>

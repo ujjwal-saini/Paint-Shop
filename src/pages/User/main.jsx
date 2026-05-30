@@ -49,7 +49,7 @@ function Main() {
           <div className='lg:col-span-9 flex flex-col gap-6'>
             <div className='p-1 md:p-7'>
               <div className='flex items-center justify-between mb-6'>
-                <h2 className='text-[14px]  font-bold text-gray-800 lg:text-[20px]'>
+                <h2 className='text-[18px] lg:text-2xl md:text-3xl  font-bold text-gray-800'>
                   Shop By Category
                 </h2>
                 <Link to="/" className=' text-[14px] text-blue-600 font-semibold lg:text-[16px]'>
