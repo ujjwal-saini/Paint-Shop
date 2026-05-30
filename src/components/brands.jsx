@@ -37,35 +37,19 @@ function Brands() {
   ];
 
   return (
-    <div className="w-full  py-2 bg-gray-50">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-
-        {brands.map((brand, index) => (
-          <motion.div
+    <div className="w-[250px] py-2 bg-gray-50">
+      <div className="flex overflow-x-auto gap-4 pb-2 custom-scroll">
+        {brands.map((brand) => (
+          <div
             key={brand.id}
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.1
-            }}
-            viewport={{ once: false }}
-            whileHover={{
-              scale: 1.08,
-              rotate: 2
-            }}
-            className="bg-white shadow-xl rounded-2xl  flex items-center justify-center cursor-pointer"
-          >
-            <motion.img
+            className="min-w-[180px] bg-white shadow-xl rounded-2xl flex items-center justify-center p-4">
+            <img
               src={brand.logo}
               alt={brand.name}
               className="h-20 object-contain"
-              whileHover={{ scale: 1.1 }}
             />
-          </motion.div>
-
+          </div>
         ))}
-
       </div>
     </div>
   );
