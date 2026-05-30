@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import AIColorPreview from "../../components/AI Color/aicolorpreview";
+import AIColorPreview from "../../components/AIColor/aIColorPreview";
 
 function Colorpreview() {
 

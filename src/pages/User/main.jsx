@@ -8,9 +8,9 @@ import Card from './card'
 import { motion } from "framer-motion";
 import Fotter from './fotter'
 import AicolorChange from '../../components/aicolorChange'
-import AIColorPreview from '../../components/AI Color/aicolorpreview'
+import AIColorPreview from '../../components/AIColor/aIColorPreview'
 import AIColorPreviewStrip from './homecolorpre'
-import Allcolor from '../../components/AI Color/allcolor'
+import Allcolor from '../../components/AIColor/allcolor'
 
 
 

@@ -15,7 +15,7 @@ import Wishlist from './pages/User/wishlist'
 import Addtocart from './pages/User/addtocart'
 import { Toaster } from "react-hot-toast";
 import Chat from './components/chat'
-import AllColorTemplate from './components/AI Color/allcolortemplate'
+import AllColorTemplate from './components/AIColor/allcolortemplate'
 
 function App() {
   return (
