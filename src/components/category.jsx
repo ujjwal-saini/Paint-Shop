@@ -56,7 +56,9 @@ custom-scroll
         <div
           key={item.id}
           className='
-      min-w-[150px]
+          min-w-[200px]
+      lg:min-w-[250px]
+      pb-5
       bg-white
       shadow
      rounded-[10px]
@@ -67,7 +69,7 @@ custom-scroll
       '
         >
 
-          <div className='w-full h-28 overflow-hidden rounded'>
+          <div className='w-full h-28 lg:h-33 overflow-hidden rounded'>
             <img
               src={item.image}
               alt={item.name}

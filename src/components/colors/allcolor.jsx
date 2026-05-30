@@ -27,7 +27,7 @@ function Allcolor() {
           Trending Colors 2026
         </h3>
 
-        <Link to="Features/AllColorTemplate" className="text-violet-600 text-[15px] lg:text-md font-semibold">
+        <Link to="Features/AllColorTemplate" className="text-violet-600 text-sm lg:text-md font-semibold">
           View All
         </Link>
       </div>

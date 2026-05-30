@@ -8,16 +8,16 @@ import Navbar from './navbar';
 function Home() {
   return (
     <div className='w-full lg:h-auto overflow-hidden relative'>
-      <img src={bg1} alt="Paint Background" className='w-full h-[30vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
+      <img src={bg1} alt="Paint Background" className='w-full h-[35vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
       <div className='absolute inset-0 flex top-1    lg:top-2'>
         <div className='pl-4 pr-[10%] w-[500px] md:px-3 lg:px-16 max-w-2xl'>
-          <motion.span className='text-[10px]  text-purple-600 bg-purple-200 py-1 px-2 rounded '> AI Powered</motion.span>
+          <motion.span className='text-[10px]  text-purple-600 bg-purple-200 py-1 px-2 rounded mt-2'> AI Powered</motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
-            className='text-[18px] mt-1 pr-[80px] sm:text-4xl md:text-5xl lg:text-5xl lg:pr-[0px] font-bold text-black leading-tight'>
+            className='text-[20px] mt-2 pr-[80px] sm:text-4xl md:text-5xl lg:text-5xl lg:pr-[0px] font-bold text-black leading-tight'>
             Bring Your Walls
             <br />
             to Life with{" "}
@@ -39,7 +39,7 @@ function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='mt-2 mr-[50%] md:mt-6 text-[10px] sm:text-base  md:text-lg lg:mr-0 lg:flex text-gray-600  max-w-lg'>
+            className='mt-2 mr-[50%] md:mt-6 text-[11px] sm:text-base  md:text-lg lg:mr-0 lg:flex text-gray-600  max-w-lg'>
             Premium paints for every surface.
             Beautiful colors. Long lasting results.
           </motion.p>
@@ -48,7 +48,7 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
-            className='flex my-3 sm:flex-row gap-2 lg:gap-4 lg:mt-6 md:mt-3 lg:mb-10'>
+            className='flex my-3 sm:flex-row gap-2 lg:gap-4 lg:mt-6 md:mt-3 lg:mb-10 mt-3 lg:mt-0'>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -64,7 +64,7 @@ function Home() {
             </motion.button>
           </motion.div>
 
-          <motion.div className="flex items-center gap-3 "
+          <motion.div className="flex items-center gap-3 mt-5 lg:mt-0 "
           >
             {/* Original */}
             <div className="flex items-center gap-2">

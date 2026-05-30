@@ -50,7 +50,7 @@ function MobileBotNav() {
               <Link
                 key={index}
                 to={item.path}
-                className={`flex flex-col items-center text-xs font-medium transition-all duration-200 ${isActive ? "text-orange-500" : "text-gray-500"
+                className={`flex flex-col items-center text-xs font-medium transition-all duration-200 ${isActive ? "text-purple-700" : "text-gray-500"
                   }`}
               >
                 <div
@@ -63,7 +63,7 @@ function MobileBotNav() {
                 <span>{item.name}</span>
 
                 {isActive && (
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1"></div>
+                  <div className="w-1.5 h-1.5 bg-purple-900 rounded-full mt-1"></div>
                 )}
               </Link>
             );
@@ -83,7 +83,7 @@ function MobileBotNav() {
               <Link
                 key={index}
                 to={item.path}
-                className={`flex flex-col items-center text-xs font-medium transition-all duration-200 ${isActive ? "text-orange-500" : "text-gray-500"
+                className={`flex flex-col items-center text-xs font-medium transition-all duration-200 ${isActive ? "text-purple-600" : "text-gray-500"
                   }`}
               >
                 <div
@@ -96,7 +96,7 @@ function MobileBotNav() {
                 <span>{item.name}</span>
 
                 {isActive && (
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1"></div>
+                  <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-1"></div>
                 )}
               </Link>
             );
@@ -116,7 +116,7 @@ function MobileBotNav() {
             </span>
 
             {/* Main Button */}
-            <div className="w-16 h-16 rounded-full bg-orange-500 shadow-lg flex items-center justify-center border-4 border-white transition-all duration-300 active:scale-95">
+            <div className="w-16 h-16 rounded-full bg-purple-800 shadow-lg flex items-center justify-center border-4 border-white transition-all duration-300 active:scale-95">
               <MessageCircleMore
                 size={30}
                 color="white"

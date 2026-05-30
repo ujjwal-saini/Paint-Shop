@@ -65,7 +65,7 @@ function Chat() {
 
         {/* Top */}
         <div className="p-4 border-b">
-          <h1 className="text-2xl font-bold text-orange-500">
+          <h1 className="text-2xl font-bold text-purple-600">
             Paint Shop Chat
           </h1>
 
@@ -88,7 +88,7 @@ function Chat() {
               className={`flex items-center gap-3 p-4 cursor-pointer border-b hover:bg-orange-50 transition ${chat.active ? "bg-orange-50" : ""
                 }`}
             >
-              <div className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">
+              <div className="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">
                 {chat.name.charAt(0)}
               </div>
 
@@ -114,7 +114,7 @@ function Chat() {
         <div className="bg-white border-b px-4 py-3 flex items-center justify-between shadow-sm">
 
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">
+            <div className="w-11 h-11 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">
               R
             </div>
 
@@ -142,14 +142,14 @@ function Chat() {
             <div
               key={msg.id}
               className={`flex ${msg.sender === "me"
-                  ? "justify-end"
-                  : "justify-start"
+                ? "justify-end"
+                : "justify-start"
                 }`}
             >
               <div
                 className={`max-w-[75%] px-4 py-3 rounded-2xl text-sm shadow ${msg.sender === "me"
-                    ? "bg-orange-500 text-white rounded-br-md"
-                    : "bg-white text-gray-700 rounded-bl-md"
+                  ? "bg-purple-600 text-white rounded-br-md"
+                  : "bg-white text-gray-700 rounded-bl-md"
                   }`}
               >
                 {msg.text}
@@ -181,7 +181,7 @@ function Chat() {
               className="flex-1 bg-transparent outline-none text-sm"
             />
 
-            <button className="w-11 h-11 rounded-full bg-orange-500 flex items-center justify-center shadow-md active:scale-95 transition">
+            <button className="w-11 h-11 rounded-full bg-purple-600 flex items-center justify-center shadow-md active:scale-95 transition">
               <Send size={18} color="white" />
             </button>
           </div>

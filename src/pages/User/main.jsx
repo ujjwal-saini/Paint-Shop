@@ -49,26 +49,25 @@ function Main() {
           <div className='lg:col-span-9 flex flex-col gap-6'>
             <div className='p-1 md:p-7'>
               <div className='flex items-center justify-between mb-6'>
-                <h2 className='text-[18px] lg:text-2xl md:text-3xl  font-bold text-gray-800'>
+                <h2 className='text-[18px] lg:text-2xl md:text-3xl  font-bold '>
                   Shop By Category
                 </h2>
-                <Link to="/" className=' text-[14px] text-blue-600 font-semibold lg:text-[16px]'>
+                <Link to="/" className=' text-[14px] text-violet-600 font-semibold lg:text-[16px]'>
                   View All
                 </Link>
               </div>
               <Category />
             </div>
-            <div className='flex gap-4'>
-              <div className='bg-white flex-3 rounded-3xl shadow-sm p-5 md:p-7'>
-                <motion.h2 initial={{ opacity: 0, y: -50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: false }} className='text-2xl font-bold text-gray-800 mb-6'>
+            <div className='flex flex-col gap-2'>
+              <div className='flex justify-between flex-3  md:p-5'>
+                <h2 className='text-[18px] lg:text-2xl md:text-3xl font-bold  '>
                   Top Brands
-                </motion.h2>
-                <Brands />
+                </h2>
+                <Link to="/" className=' text-[14px] text-violet-600 font-semibold lg:text-[16px]'>
+                  View All
+                </Link>
               </div>
-
+              <Brands />
             </div>
           </div>
           <div className='h-fit lg:col-span-3'>

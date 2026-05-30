@@ -58,9 +58,9 @@ export default function AIColorPreview() {
     <>
       <section className="w-full mt-8 max-w-8xl mx-auto bg-white p-4 md:p-6">
 
-        <div className="flex  md:flex-row md:items-center justify-between gap-4 mb-6">
-          <div>
-            <div className="flex  items-center gap-3">
+        <div className="flex md:flex-row md:items-center justify-between lg:gap-4 mb-6">
+          <div className="flex-2">
+            <div className="flex items-center gap-3">
               <h2 className="text-[18px] lg:text-2xl md:text-3xl font-bold">
                 Color Preview
               </h2>
@@ -70,7 +70,7 @@ export default function AIColorPreview() {
               </span>
             </div>
 
-            <p className="text-gray-500 text-[13px]  lg:text-sm mt-2">
+            <p className="text-gray-500 text-[12px]  lg:text-sm mt-2">
               Upload your room photo and try colors instantly
             </p>
           </div>

@@ -37,16 +37,17 @@ function Brands() {
   ];
 
   return (
-    <div className="w-[250px] py-2 bg-gray-50">
-      <div className="flex overflow-x-auto gap-4 pb-2 custom-scroll">
+    <div className="w-[270px] lg:w-[100%] lg:px-7 bg-gray-50">
+      <div className="flex w-[300px] lg:w-full overflow-x-auto gap-4  py-5 custom-scroll">
         {brands.map((brand) => (
           <div
             key={brand.id}
-            className="min-w-[180px] bg-white shadow-xl rounded-2xl flex items-center justify-center p-4">
+            className="min-w-[180px] bg-white shadow
+     rounded-[20px] flex items-center justify-center lg:p-2">
             <img
               src={brand.logo}
               alt={brand.name}
-              className="h-20 object-contain"
+              className="h-22 lg:25 object-contain"
             />
           </div>
         ))}
