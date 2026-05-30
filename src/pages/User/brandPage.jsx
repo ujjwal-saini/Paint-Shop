@@ -11,16 +11,17 @@ function BrandPage() {
   return (
     <div className="bg-gray-50 min-h-screen overflow-hidden">
 
-      <section className="relative bg-gradient-to-r from-[#0B1238] via-indigo-800 to-purple-700 text-white overflow-hidden">
+      <section className="relative  bg-primary text-white overflow-hidden">
         <div className="absolute top-0 right-0 w-72 h-72 bg-pink-500/20 blur-3xl rounded-full"></div>
 
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
             <div className="text-center md:text-left">
-              <p className="text-sm uppercase tracking-[4px] text-indigo-200 mb-4">
+              <p className="text-sm uppercase tracking-[4px] text-indigo-200  mb-4">
                 Premium Paint Brands
               </p>
+
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 Trusted Paint <br />

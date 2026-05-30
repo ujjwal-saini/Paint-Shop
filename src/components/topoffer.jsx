@@ -80,16 +80,16 @@ function TopOffer() {
             </button>
 
             {openLocation && (
-              <div className="absolute top-12 left-0 w-[280px] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50">
+              <div className="absolute top-12 left-0 w-[250px] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50">
                 <h3 className="font-bold text-gray-800 text-lg">
                   Select Location
                 </h3>
-                <p className="text-sm text-gray-500 mt-1 mb-4">
+                <p className="text-[13px] text-gray-500 mt-1 mb-4">
                   Allow access to detect your current location automatically.
                 </p>
                 <button
                   onClick={getCurrentLocation}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-2xl font-semibold hover:scale-[1.02] transition">
+                  className="w-full bg-secondary text-white py-2 rounded-[10px] font-semibold hover:scale-[1.02] transition">
                   Use Current Location
                 </button>
               </div>
@@ -158,7 +158,7 @@ function TopOffer() {
                 </p>
 
                 <button onClick={getCurrentLocation}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-2xl font-semibold">
+                  className="w-full bg-secondary text-white py-3 rounded-2xl font-semibold">
                   Use Current Location
                 </button>
 

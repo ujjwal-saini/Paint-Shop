@@ -7,6 +7,10 @@ import Category from '../../components/category'
 import Card from './card'
 import { motion } from "framer-motion";
 import Fotter from './fotter'
+import AicolorChange from '../../components/aicolorChange'
+import AIColorPreview from '../../components/AI Color/aicolorpreview'
+import AIColorPreviewStrip from './homecolorpre'
+import Allcolor from '../../components/AI Color/allcolor'
 
 
 
@@ -37,6 +41,9 @@ function Main() {
   return (
     <Fragment>
       <Home />
+      {/* <AIColorPreview /> */}
+      <AIColorPreviewStrip />
+      <Allcolor />
       <div className='w-full px-4 md:px-8 lg:px-4 py-8 bg-[#f8f8fb]'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-6'>
           <div className='lg:col-span-9 flex flex-col gap-6'>

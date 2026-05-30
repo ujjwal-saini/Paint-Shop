@@ -1,6 +1,28 @@
 @import "tailwindcss";
 
-
+@utility bg-primary {
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #111827,
+    #000000
+  );
+}
+@utility bg-secondary {
+  background-image: linear-gradient(
+    to right,
+    #0f172a,
+    #1e293b,
+    #0f172a
+  );
+}
+@utility bg-third {
+  background-image: linear-gradient(
+    to right,
+    #ec4899,
+    #2563eb
+  );
+}
 
 body{
   font-family: 'Poppins', sans-serif;

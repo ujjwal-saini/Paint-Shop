@@ -53,13 +53,13 @@ function Home() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="hidden text-[10px] lg:block sm:text-[13px] md:text-[15px] lg:text-[16px] px-3 py-2 sm:px-6 sm:py-2.5
-               md:px-8 md:py-3 rounded-2xl bg-gradient-to-r from-pink-500 to-blue-600 text-white font-semibold shadow-lg">
+               md:px-8 md:py-3 rounded-2xl bg-third text-white font-semibold shadow-lg">
               Shop Now
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className='text-[10px] sm:text-[13px] md:text-[15px] lg:text-[16px] px-4 py-[9px] sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-[10px]  bg-purple-600 text-white font-semibold shadow-lg' >
+              className='text-[10px] sm:text-[13px] md:text-[15px] lg:text-[16px] px-4 py-[9px] sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-[10px]  bg-purple-800 text-white font-semibold shadow-lg' >
               Try Color Preview
             </motion.button>
           </motion.div>

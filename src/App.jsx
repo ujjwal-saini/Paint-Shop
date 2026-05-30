@@ -15,6 +15,7 @@ import Wishlist from './pages/User/wishlist'
 import Addtocart from './pages/User/addtocart'
 import { Toaster } from "react-hot-toast";
 import Chat from './components/chat'
+import AllColorTemplate from './components/AI Color/allcolortemplate'
 
 function App() {
   return (
@@ -66,6 +67,8 @@ function App() {
           </Route>
           <Route path='brands' element={<BrandPage />} />
           <Route path='Features/colorpreview' element={<Colorpreview />} />
+          <Route path='Features/AllColorTemplate' element={<AllColorTemplate />} />
+
           <Route path='offers' element={<Offer />} />
           <Route path='contact' element={<Contact />} />
           <Route path='shop' element={<Shop />} />

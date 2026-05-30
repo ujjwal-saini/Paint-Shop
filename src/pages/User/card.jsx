@@ -191,7 +191,7 @@ function Card() {
                   {!cart[item.id] ? (
                     <button
                       onClick={() => addToCart(item.id)}
-                      className="w-full h-10 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-400 hover:scale-[1.02] text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+                      className="w-full h-10 rounded-2xl bg-secondary hover:scale-[1.02] text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300"
                     >
                       <ShoppingCart className="w-5 h-5" />
                       Add To Cart
@@ -211,7 +211,7 @@ function Card() {
 
                       <button
                         onClick={() => increaseQty(item.id)}
-                        className="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600 transition-all"
+                        className="w-10 h-10 rounded-xl bg-secondary text-white flex items-center justify-center hover:bg-blue-600 transition-all"
                       >
                         <Plus className="w-4 h-4" />
                       </button>
