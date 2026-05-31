@@ -2,7 +2,10 @@ import React from "react";
 import { Menu, Bell, Search } from "lucide-react";
 
 function Navbar({ opensidebar, setopensidebar }) {
-  console.log(opensidebar, "nav")
+
+
+
+
   return (
     <div className="fixed h-20 w-full lg:w-[calc(100%-288px)] bg-[#0d1b34] border-b border-white/10 flex items-center justify-between px-6">
       <div className="flex items-center gap-4">

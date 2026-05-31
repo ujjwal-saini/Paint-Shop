@@ -18,6 +18,13 @@ import Chat from './components/chat'
 import AllColorTemplate from './components/colors/allcolortemplate'
 import Landingadmin from './pages/Admin/landingadmin'
 import MainAdmin from './pages/Admin/mainAdmin'
+import Users from './pages/Admin/users'
+import Colorshades from './pages/Admin/colorshades'
+import Orders from './pages/Admin/orders'
+import Analytics from './pages/Admin/analytics'
+import Productsadmin from './pages/Admin/products'
+import UserDetails from './pages/Admin/components/userDetails'
+import Addproducts from './pages/Admin/components/addproducts'
 
 function App() {
   return (
@@ -77,9 +84,16 @@ function App() {
         {/* admin */}
         <Route path='dashboard' element={<Landingadmin />} >
           <Route index element={<MainAdmin />} />
+          <Route path='users' element={<Users />} />
+          <Route path="users/:id" element={<UserDetails />} />
+          <Route path='paintshades' element={<Colorshades />} />
+          <Route path='orders' element={<Orders />} />
+          <Route path='products' element={<Productsadmin />} />
+          <Route path='products/addProducts' element={<Addproducts />} />
+          <Route path='analytics' element={<Analytics />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter >
   )
 }
 
