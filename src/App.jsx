@@ -24,7 +24,8 @@ import Orders from './pages/Admin/orders'
 import Analytics from './pages/Admin/analytics'
 import Productsadmin from './pages/Admin/products'
 import UserDetails from './pages/Admin/components/userDetails'
-import Addproducts from './pages/Admin/components/addproducts'
+import Addproducts from './pages/Admin/addproducts'
+import AddProducts from './pages/Admin/addproducts'
 
 function App() {
   return (
@@ -89,7 +90,7 @@ function App() {
           <Route path='paintshades' element={<Colorshades />} />
           <Route path='orders' element={<Orders />} />
           <Route path='products' element={<Productsadmin />} />
-          <Route path='products/addProducts' element={<Addproducts />} />
+          <Route path='products/addProducts' element={<AddProducts />} />
           <Route path='analytics' element={<Analytics />} />
         </Route>
       </Routes>
