@@ -16,6 +16,8 @@ import Addtocart from './pages/User/addtocart'
 import { Toaster } from "react-hot-toast";
 import Chat from './components/chat'
 import AllColorTemplate from './components/colors/allcolortemplate'
+import Landingadmin from './pages/Admin/landingadmin'
+import MainAdmin from './pages/Admin/mainAdmin'
 
 function App() {
   return (
@@ -60,15 +62,10 @@ function App() {
           <Route path='categories' element={<Products />}>
             <Route index element={<Card />} />
             <Route path='interiorpaints' element={<h1>Interior Paints</h1>} />
-            <Route path='exteriorpaints' element={<h1>Exterior Paints</h1>} />
-            <Route path='primerspaints' element={<h1>Primers</h1>} />
-            <Route path='woodfinish' element={<h1>Wood Finish</h1>} />
-            <Route path='waterproofing' element={<h1>Waterproofing</h1>} />
           </Route>
           <Route path='brands' element={<BrandPage />} />
           <Route path='Features/colorpreview' element={<Colorpreview />} />
           <Route path='Features/AllColorTemplate' element={<AllColorTemplate />} />
-
           <Route path='offers' element={<Offer />} />
           <Route path='contact' element={<Contact />} />
           <Route path='shop' element={<Shop />} />
@@ -76,6 +73,10 @@ function App() {
           <Route path='wishlist' element={<Wishlist />} />
           <Route path='addtocart' element={<Addtocart />} />
           <Route path='chat' element={<Chat />} />
+        </Route>
+        {/* admin */}
+        <Route path='dashboard' element={<Landingadmin />} >
+          <Route index element={<MainAdmin />} />
         </Route>
       </Routes>
     </BrowserRouter>
