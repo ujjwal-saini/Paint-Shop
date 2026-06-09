@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className='w-full lg:h-auto overflow-hidden relative'>
       <img src={bg1} alt="Paint Background" className='w-full h-[55vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
-      <div className='absolute inset-0 flex top-15 lg:top-2'>
+      <div className='absolute inset-0 flex top-13 lg:top-2'>
         <div className='pl-6 pr-[10%] w-[500px] md:px-3 lg:px-16 max-w-2xl'>
           <motion.span className='text-[10px]  text-purple-600 bg-purple-200 py-1 px-2 rounded mt-2'> AI Powered</motion.span>
           <motion.h1

@@ -154,7 +154,7 @@ function Navbar() {
               </a>
 
               <Link to="/addtocart"
-                className="relative w-8 h-8 md:w-[48px] md:h-[48px] rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition">
+                className="hidden lg:flex relative w-8 h-8 md:w-[48px] md:h-[48px] rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition">
                 <ShoppingCart size={17} />
 
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] h-5 w-5 rounded-full flex items-center justify-center font-bold">
@@ -163,9 +163,9 @@ function Navbar() {
               </Link>
 
               {/* PROFILE */}
-              <div className="relative hidden md:block group">
+              <div className="relative  md:block group">
 
-                <button className="w-[48px] h-[48px] rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-50 hover:text-purple-600 transition">
+                <button className="w-8 h-8 lg:h-[52px] lg:w-[52px] rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-50 hover:text-purple-600 transition">
                   <User size={20} />
                 </button>
 
