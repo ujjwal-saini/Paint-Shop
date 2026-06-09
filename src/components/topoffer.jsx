@@ -122,15 +122,15 @@ function TopOffer() {
         </div>
 
         {/* MOBILE */}
-        <div className="flex md:hidden items-center justify-between py-2">
+        <div className="flex md:hidden items-center justify-between py-1">
           <div className="flex items-start gap-2">
             <MapPin size={18} className="text-orange-500 mt-[2px]" />
 
             <div className="leading-tight text-left">
-              <p className="text-[11px] font-medium text-gray-500">
+              <p className="text-[10px] font-medium text-gray-500">
                 Delivering to
               </p>
-              <h4 className="text-[14px] font-bold text-purple-600 mt-[2px]">
+              <h4 className="text-[12px] font-bold text-purple-600 mt-[2px]">
                 {location}
               </h4>
 
@@ -147,18 +147,17 @@ function TopOffer() {
 
             {/* MOBILE POPUP */}
             {openLocation && (
-
               <div className="absolute top-12 right-0 w-[260px] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50">
-                <h3 className="font-bold text-gray-800">
+                <h3 className="text-[15px] font-bold text-gray-800">
                   Select Location
                 </h3>
 
-                <p className="text-sm text-gray-500 mt-1 mb-4">
+                <p className="text-[14px]  text-gray-500 mt-1 mb-4">
                   Enable current location access
                 </p>
 
                 <button onClick={getCurrentLocation}
-                  className="w-full bg-secondary text-white py-3 rounded-2xl font-semibold">
+                  className="w-full bg-secondary text-[14px] text-white py-[6px] rounded-2xl font-semibold">
                   Use Current Location
                 </button>
 

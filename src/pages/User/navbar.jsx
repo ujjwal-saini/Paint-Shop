@@ -57,23 +57,23 @@ function Navbar() {
          ${ShowSearch ? "rounded-b-3xl" : ""}`}>
         <TopOffer />
         <motion.div className="max-w-[1500px] mx-auto px-3 sm:px-4 lg:px-8 ">
-          <div className="h-[72px] md:h-[78px] flex items-center justify-between gap-3">
+          <div className="h-[52px] md:h-[78px] flex items-center justify-between gap-3">
             <div className="flex items-center gap-2 md:gap-4 lg:gap-8 flex-1">
               <button onClick={() => setOpenmenu(true)}
-                className="lg:hidden w-10 h-10 rounded-2xl bg-gray-100 flex items-center justify-center shrink-0">
-                <Menu size={22} />
+                className="lg:hidden w-8 h-8 rounded-2xl bg-gray-100 flex items-center justify-center shrink-0">
+                <Menu size={18} />
               </button>
 
               <Link to="/" className="flex items-center   shrink-0">
                 <img src={websitelogo} alt="logo" className="h-10 sm:h-11 md:h-12 w-auto object-contain" />
                 <div className="flex flex-col leading-none">
-                  <h1 className="text-[20px] sm:text-[22px] md:text-[24px] font-extrabold tracking-tight text-gray-900">
+                  <h1 className="text-[18px] lg:text-[22px] md:text-[24px] font-extrabold tracking-tight text-gray-900">
                     Paint
                     <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent">
                       Store
                     </span>
                   </h1>
-                  <p className="text-[10px] sm:text-[11px] text-gray-500 font-medium tracking-wide mt-1">
+                  <p className="text-[8px] sm:text-[11px] lg:text-[10px] text-gray-500 font-medium tracking-wide mt-1">
                     Premium Paint Store
                   </p>
                 </div>
@@ -130,8 +130,8 @@ function Navbar() {
             {/* RIGHT */}
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4 shrink-0">
               {/* SEARCH MOBILE */}
-              <button onClick={() => { setShowSearch(!ShowSearch) }} className="md:hidden w-10 h-10 rounded-2xl bg-gray-100 flex items-center justify-center">
-                <Search size={20} />
+              <button onClick={() => { setShowSearch(!ShowSearch) }} className="md:hidden w-9 h-8 rounded-2xl bg-gray-100 flex items-center justify-center">
+                <Search size={17} />
               </button>
               {/* MAP */}
               <a href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7" target="_blank" rel="noopener noreferrer"
@@ -154,8 +154,8 @@ function Navbar() {
               </a>
 
               <Link to="/addtocart"
-                className="relative w-[42px] h-[42px] md:w-[48px] md:h-[48px] rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition">
-                <ShoppingCart size={20} />
+                className="relative w-8 h-8 md:w-[48px] md:h-[48px] rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition">
+                <ShoppingCart size={17} />
 
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] h-5 w-5 rounded-full flex items-center justify-center font-bold">
                   3
@@ -294,14 +294,14 @@ function Navbar() {
                     duration: 0.35,
                   }}
 
-                  className="pb-4 pt-1"
+                  className="pb-2 pt-1"
                 >
 
                   <div className="relative">
 
                     {/* ICON */}
                     <Search
-                      size={18}
+                      size={16}
                       className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
                     />
 
@@ -309,15 +309,15 @@ function Navbar() {
                     <input
                       type="text"
                       placeholder="Search paints..."
-                      className="w-full h-[40px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-12 pr-12 text-sm shadow-sm"
+                      className="w-full h-[30px] rounded-full bg-gray-100 border border-transparent focus:border-purple-400 focus:ring-4 focus:ring-purple-100 outline-none pl-12 pr-12 text-[12px] shadow-sm"
                     />
 
                     {/* CLOSE */}
                     <button
                       onClick={() => setShowSearch(false)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white shadow flex items-center justify-center"
                     >
-                      <X size={15} />
+                      <X size={12} />
                     </button>
 
                   </div>

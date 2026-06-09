@@ -41,7 +41,6 @@ function Main() {
   return (
     <Fragment>
       <Home />
-      {/* <AIColorPreview /> */}
       <AIColorPreviewStrip />
       <Allcolor />
       <div className='w-full px-4 md:px-8 lg:px-4 py-8 bg-[#f8f8fb]'>
