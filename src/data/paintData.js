@@ -1,0 +1,42 @@
+export const SURFACES = [
+  {
+    id: "wall",
+    title: "Wall Paint",
+    about: "Calculate paint for walls",
+    img: "https://png.pngtree.com/png-vector/20240128/ourmid/pngtree-house-front-view-png-image_11509190.png",
+    coverage: 120,
+    primerCoverage: 150,
+  },
+  {
+    id: "door",
+    title: "Door Paint",
+    about: "Calculate paint for doors",
+    img: "https://png.pngtree.com/png-vector/20240203/ourmid/pngtree-wooden-door-vector-illustration-isolated-png-image_11594846.png",
+    coverage: 100,
+    primerCoverage: 120,
+  },
+  {
+    id: "gate",
+    title: "Gate Paint",
+    about: "Calculate paint for gates",
+    img: "https://img.magnific.com/premium-photo/iron-gates-white-background-architecture-protection_53876-341373.jpg?semt=ais_hybrid&w=740&q=80",
+    coverage: 80,
+    primerCoverage: 100,
+  },
+  {
+    id: "window",
+    title: "Window Paint",
+    about: "Calculate paint for windows",
+    img: "https://clipart-library.com/img/1860557.png",
+    coverage: 100,
+    primerCoverage: 120,
+  },
+  {
+    id: "boundary",
+    title: "Boundary Wall",
+    about: "Calculate paint for boundary walls",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpZ5-A5wu-UXl6u5UftlaqaKsu3Jzr4hcrLg&s",
+    coverage: 120,
+    primerCoverage: 150,
+  },
+];
