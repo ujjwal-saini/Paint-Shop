@@ -371,27 +371,27 @@ function Navbar() {
                 Home
               </Link>
 
-              <Link to="/products" onClick={() => setOpenmenu(false)}>
+              <Link to="Features/products" onClick={() => setOpenmenu(false)}>
                 Products
               </Link>
 
-              <Link to="/brands" onClick={() => setOpenmenu(false)}>
+              <Link to="Features//brands" onClick={() => setOpenmenu(false)}>
                 Brands
               </Link>
 
-              <Link to="/colorpreview" onClick={() => setOpenmenu(false)}>
+              <Link to="Features/colorpreview" onClick={() => setOpenmenu(false)}>
                 Color Preview
               </Link>
 
-              <Link to="/paintcalculator" onClick={() => setOpenmenu(false)}>
+              <Link to="Features/paintcalculator" onClick={() => setOpenmenu(false)}>
                 Paint Calculator
               </Link>
 
-              <Link to="/offers" onClick={() => setOpenmenu(false)}>
+              <Link to="Features/offers" onClick={() => setOpenmenu(false)}>
                 Offers
               </Link>
 
-              <Link to="/contact" onClick={() => setOpenmenu(false)}>
+              <Link to="Features/contact" onClick={() => setOpenmenu(false)}>
                 Contact
               </Link>
 
@@ -399,8 +399,7 @@ function Navbar() {
                 href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-black-600 text-white py-4 rounded-2xl mt-4"
-              >
+                className="flex items-center justify-center gap-3 bg-black-600 text-white py-4 rounded-2xl mt-4">
 
                 <MapPin size={22} />
 

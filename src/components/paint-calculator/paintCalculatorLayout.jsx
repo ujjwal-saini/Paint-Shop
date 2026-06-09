@@ -8,7 +8,7 @@ import BoundaryCalculator from "./calculators/boundaryCalculator";
 import ResultPanel from "./resultPanel";
 import RecommendedPacks from "./recommendedPacks";
 import { SURFACES } from "../../data/paintData";
-
+import { ArrowLeft } from "lucide-react";
 
 export default function PaintCalculatorLayout() {
   const [activeSurface, setActiveSurface] = useState("");
@@ -90,45 +90,40 @@ export default function PaintCalculatorLayout() {
               </div>
             </div>
           )}
-
-
         </div>
 
         <div className="col-span-3 space-y-5">
-
           <ResultPanel
-            result={result}
-          />
-
+            result={result} />
           <RecommendedPacks
             litres={
-              result?.paintRequired || 0
-            }
-          />
-
+              result?.paintRequired || 0} />
         </div>
       </div>
 
       <div className="lg:hidden space-y-5">
 
-        <SurfaceSelector
-          active={activeSurface}
-          setActive={setActiveSurface}
-          surfaces={SURFACES}
-        />
+        {activeSurface == "" ? (
+          <>
+            <SurfaceSelector
+              active={activeSurface}
+              setActive={setActiveSurface}
+              surfaces={SURFACES}
+            />
+          </>) :
+          (<>
+            <div className="p-2">
+              <button onClick={() => setActiveSurface("")}
+                className="flex items-center gap-2 mb-4 px-4 py-2 rounded-xl border hover:bg-slate-100 transition">
+                <ArrowLeft size={18} />
+              </button>
+              {renderCalculator()}
 
-        {renderCalculator()}
-
-        <ResultPanel
-          result={result}
-        />
-
-        <RecommendedPacks
-          litres={
-            result?.paintRequired || 0
-          }
-        />
-
+            </div>
+            <ResultPanel result={result} />
+            <RecommendedPacks litres={result?.paintRequired || 0} />
+          </>
+          )}
       </div>
     </>
   );

@@ -10,7 +10,7 @@ function Landing() {
       <div className='w-full'>
         <Navbar />
       </div>
-      <div className='w-full min-h-screen '>
+      <div className='w-full lg:min-h-screen '>
         <Outlet />
       </div>
       <MobileBotNav />
