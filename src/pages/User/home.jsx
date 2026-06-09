@@ -8,8 +8,8 @@ import Navbar from './navbar';
 function Home() {
   return (
     <div className='w-full lg:h-auto overflow-hidden relative'>
-      <img src={bg1} alt="Paint Background" className='w-full h-[50vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
-      <div className='absolute inset-0 flex top-10 lg:top-2'>
+      <img src={bg1} alt="Paint Background" className='w-full h-[42vh]  opacity-90 lg:h-[calc(100vh-130px)] object-cover' />
+      <div className='absolute inset-0 flex top-8 lg:top-2'>
         <div className='pl-6 pr-[10%] w-[500px] md:px-3 lg:px-16 max-w-2xl'>
           <motion.span className='text-[10px]  text-purple-600 bg-purple-200 py-1 px-2 rounded mt-2'> AI Powered</motion.span>
           <motion.h1
