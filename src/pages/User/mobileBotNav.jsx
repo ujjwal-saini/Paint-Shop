@@ -1,12 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  House,
-  Store,
-  MessageCircleMore,
-  Heart,
-  User,
-} from "lucide-react";
+import { House, Store, MessageCircleMore, Heart, User, ShoppingCart } from "lucide-react";
 
 function MobileBotNav() {
   const location = useLocation();
@@ -99,7 +93,7 @@ function MobileBotNav() {
 
         {/* Floating Chat Button */}
         <Link
-          to="/chat"
+          to="/addtocart"
           className="absolute left-1/2 -translate-x-1/2 -top-2"
         >
           <div className="relative">
@@ -111,7 +105,7 @@ function MobileBotNav() {
 
             {/* Main Button */}
             <div className="w-12 h-12 rounded-full bg-purple-800 shadow-lg flex items-center justify-center border-4 border-white transition-all duration-300 active:scale-95">
-              <MessageCircleMore
+              <ShoppingCart
                 size={25}
                 color="white"
                 strokeWidth={2.5}
