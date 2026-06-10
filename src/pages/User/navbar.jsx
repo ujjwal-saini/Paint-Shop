@@ -15,6 +15,7 @@ function Navbar() {
   const [openLogin, setOpenLogin] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
   const [ShowSearch, setShowSearch] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
   console.log(openLogin);
   useEffect(() => {
@@ -165,29 +166,34 @@ function Navbar() {
               {/* PROFILE */}
               <div className="relative  md:block group">
 
-                <button className="w-8 h-8 lg:h-[52px] lg:w-[52px] rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-50 hover:text-purple-600 transition">
+                <button className="w-8 h-8 lg:h-[52px] lg:w-[52px] rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-50 hover:text-purple-600 transition cursor-pointer"
+                  onClick={() => setProfileOpen(!profileOpen)}
+                >
                   <User size={20} />
                 </button>
 
                 {/* DROPDOWN */}
-                <div className="absolute top-14 right-0 w-[290px] bg-white rounded-[30px] shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
-
+                <div className={`absolute top-10 lg:top-15 -right-5 lg:-right-0 w-[200px] lg:w-[320px]  bg-white rounded-b-2xl   lg:rounded-[30px] shadow-2xl border border-gray-100
+                overflow-hidden transition-all duration-300 z-50 ${profileOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+                lg:group-hover:opacity-100 lg:group-hover:visible`}>
                   {/* TOP */}
-                  <div className="p-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                    <h3 className="text-lg font-bold">
+                  <div className="p-3 flex  justify-between items-center  lg:p-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+
+                    <div> <h3 className="text-[15px]  lg:text-lg font-bold">
                       Welcome Back
                     </h3>
-                    <p className="text-sm opacity-90 mt-1">
-                      Access your account
-                    </p>
+                      <p className="hidden lg:block text-sm opacity-90 mt-1">
+                        Access your account
+                      </p>
+                    </div>
                     <button
                       onClick={() => setOpenLogin(true)}
-                      className="mt-4 bg-white text-purple-600 px-5 py-2 rounded-full font-semibold text-sm hover:scale-105 transition">
+                      className=" bg-white text-purple-600 py-1 px-3 lg:px-5 lg:py-2 rounded-full font-semibold text-sm hover:scale-105 transition">
                       Login
                     </button>
                   </div>
                   {/* LINKS */}
-                  <div className="p-3">
+                  <div className="lg:p-3">
                     {[
                       {
                         icon: <UserCircle2 size={20} />,
@@ -213,7 +219,7 @@ function Navbar() {
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="flex items-center gap-3 px-4 py-4 rounded-2xl hover:bg-gray-100 transition font-medium text-gray-700"
+                        className="flex text-[14px] lg:text-[16px] items-center gap-3 lg:px-4 px-4 py-3 lg:py-4 rounded-2xl hover:bg-gray-100 transition font-medium text-gray-700"
                       >
                         {item.icon}
                         {item.name}
@@ -223,13 +229,11 @@ function Navbar() {
                   </div>
 
                   {/* LOGOUT */}
-                  <div className="p-3 border-t">
-
+                  <div className="lg:p-3 border-t">
                     <button className="w-full flex items-center gap-3 px-4 py-4 rounded-2xl hover:bg-red-50 text-red-500 transition font-medium">
                       <LogOut size={20} />
                       Logout
                     </button>
-
                   </div>
                 </div>
               </div>
