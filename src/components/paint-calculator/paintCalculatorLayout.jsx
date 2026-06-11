@@ -69,7 +69,6 @@ export default function PaintCalculatorLayout() {
           <SurfaceSelector
             active={activeSurface}
             setActive={setActiveSurface}
-            surfaces={SURFACES}
           />
         </div>
 

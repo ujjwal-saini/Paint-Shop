@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './navbar'
 import Main from './main'
 import { Outlet } from 'react-router-dom'
-import MobileBotNav from './mobileBotNav'
+
 
 function Landing() {
   return (
@@ -13,7 +13,6 @@ function Landing() {
       <div className='w-full lg:min-h-screen '>
         <Outlet />
       </div>
-      <MobileBotNav />
     </div>
   )
 }

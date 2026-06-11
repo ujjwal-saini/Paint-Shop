@@ -1,6 +1,7 @@
 import { Paintbrush, ArrowRight } from "lucide-react";
-
-export default function SurfaceSelector({ active, setActive, surfaces, }) {
+import { SURFACES } from "../../data/paintData";
+export default function SurfaceSelector({ active, setActive, }) {
+  let surfaces = SURFACES;
   return (
     <div className="bg-white rounded-3xl shadow-lg  p-3">
       <div className="mb-4">
@@ -13,7 +14,7 @@ export default function SurfaceSelector({ active, setActive, surfaces, }) {
 
         {surfaces.map((surface) => (
           <button key={surface.id} onClick={() => setActive(surface.id)}
-            className={`w-full flex justify-between items-center gap-2 p-2 rounded-2xl border-gray-300 border overflow-hidden
+            className={`w-full flex justify-between items-center gap-2 p-3 rounded-2xl border-gray-300 border overflow-hidden
             ${active === surface.id
                 ? "border-violet-500 border-2 text-violet-500"
                 : "hover:border-violet-500"

@@ -11,6 +11,7 @@ import AicolorChange from '../../components/aicolorChange'
 import AIColorPreview from '../../components/colors/aIColorPreview'
 import AIColorPreviewStrip from './homecolorpre'
 import Allcolor from '../../components/colors/allcolor'
+import SurfaceSelector from '../../components/paint-calculator/surfaceSelector'
 
 
 
@@ -70,7 +71,15 @@ function Main() {
             </div>
           </div>
           <div className='h-fit lg:col-span-3'>
-            <PaintCalculator />
+            <div className='w-full flex justify-between px-3'>
+              <h2 className='text-[14px] lg:text-[20px] md:text-3xl  font-bold '>
+                Paint Calculator
+              </h2>
+              <Link to="Features/paintcalculator" className=' text-[14px] text-violet-600 font-semibold lg:text-[16px]'>
+                View All
+              </Link>
+            </div>
+            <SurfaceSelector />
           </div>
 
         </div>
