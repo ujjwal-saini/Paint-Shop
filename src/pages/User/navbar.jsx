@@ -9,6 +9,7 @@ import websitelogo from "../../assets/websitelogo.png";
 import Login from "../Auth/login";
 import Signup from "../Auth/signup";
 import TopOffer from "../../components/topoffer";
+import SideMobilebar from "./sideMobilebar";
 
 function Navbar() {
   const [openMenu, setOpenmenu] = useState(false);
@@ -16,6 +17,7 @@ function Navbar() {
   const [openSignup, setOpenSignup] = useState(false);
   const [ShowSearch, setShowSearch] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+
 
   console.log(openLogin);
   useEffect(() => {
@@ -348,79 +350,7 @@ function Navbar() {
 
       <AnimatePresence>
         {openMenu && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.35 }}
-            className="fixed inset-0 bg-white z-[9999] lg:hidden">
-
-            <div className="flex items-center justify-between p-5 border-b">
-              <Link to="/" className="flex items-center   shrink-0">
-                <img src={websitelogo} alt="logo" className="h-10 sm:h-11 md:h-12 w-auto object-contain" />
-                <div className="flex flex-col leading-none">
-                  <h1 className="text-[20px] sm:text-[22px] md:text-[24px] font-extrabold tracking-tight text-gray-900">
-                    Paint
-                    <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent">
-                      Store
-                    </span>
-                  </h1>
-                  <p className="text-[10px] sm:text-[11px] text-gray-500 font-medium tracking-wide mt-1">
-                    Premium Paint Store
-                  </p>
-                </div>
-              </Link>
-
-              <button onClick={() => setOpenmenu(false)}>
-                <X size={30} />
-              </button>
-
-            </div>
-
-            <div className="flex flex-col gap-7 p-8 text-lg font-semibold">
-
-              <Link to="/" onClick={() => setOpenmenu(false)}>
-                Home
-              </Link>
-
-              <Link to="Features/products" onClick={() => setOpenmenu(false)}>
-                Products
-              </Link>
-
-              <Link to="Features//brands" onClick={() => setOpenmenu(false)}>
-                Brands
-              </Link>
-
-              <Link to="Features/colorpreview" onClick={() => setOpenmenu(false)}>
-                Color Preview
-              </Link>
-
-              <Link to="Features/paintcalculator" onClick={() => setOpenmenu(false)}>
-                Paint Calculator
-              </Link>
-
-              <Link to="Features/offers" onClick={() => setOpenmenu(false)}>
-                Offers
-              </Link>
-
-              <Link to="Features/contact" onClick={() => setOpenmenu(false)}>
-                Contact
-              </Link>
-
-              <a
-                href="https://maps.app.goo.gl/kxAi26rAg69gJ62S7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-black-600 text-white py-4 rounded-2xl mt-4">
-
-                <MapPin size={22} />
-
-                Visit Our Store
-
-              </a>
-
-            </div>
-          </motion.div>
+          <SideMobilebar setOpenmenu={setOpenmenu} />
         )}
       </AnimatePresence>
       {/* LOGIN MODAL */}
