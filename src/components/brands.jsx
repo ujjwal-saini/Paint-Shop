@@ -37,8 +37,8 @@ function Brands() {
   ];
 
   return (
-    <div className="w-[270px] lg:w-[100%] lg:px-7 bg-gray-50">
-      <div className="flex w-[280px] lg:w-full overflow-x-auto gap-4  py-5 custom-scroll">
+    <div className="w-auto lg:w-[100%] lg:px-7 bg-gray-50">
+      <div className="flex w-full overflow-x-auto gap-4  py-5 custom-scroll">
         {brands.map((brand) => (
           <div
             key={brand.id}

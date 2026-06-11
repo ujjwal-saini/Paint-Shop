@@ -336,6 +336,14 @@ function Navbar() {
         </motion.div>
       </header>
 
+      <Link to="/addtocart"
+        className=" lg:hidden fixed bottom-8   right-5 w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition z-50">
+        <ShoppingCart size={17} />
+
+        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] h-5 w-5 rounded-full flex items-center justify-center font-bold">
+          3
+        </span>
+      </Link>
       <div className="h-[130px]" />
 
       <AnimatePresence>
