@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import PaintCalculator from '../../components/paintCalculator'
 import Brands from '../../components/brands'
 import Home from './home'
 import Category from '../../components/category'

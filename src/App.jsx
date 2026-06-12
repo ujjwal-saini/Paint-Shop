@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Landing from './pages/User/landing'
 import Main from './pages/User/main'
-import Products from './pages/User/products'
 import PaintCalculotorpage from './pages/User/paintCalculotorpage'
 import BrandPage from './pages/User/brandPage'
 import Card from './pages/User/card'
@@ -26,6 +25,8 @@ import Productsadmin from './pages/Admin/products'
 import UserDetails from './pages/Admin/components/userDetails'
 import Addproducts from './pages/Admin/addproducts'
 import AddProducts from './pages/Admin/addproducts'
+import CategoryPage from './pages/User/categoryPage'
+import ProductDetail from './pages/User/productDetail'
 
 function App() {
   return (
@@ -67,10 +68,8 @@ function App() {
         <Route path='/' element={<Landing />}>
           <Route index element={<Main />} />
           <Route path='Features/paintcalculator' element={<PaintCalculotorpage />} />
-          <Route path='categories' element={<Products />}>
-            <Route index element={<Card />} />
-            <Route path='interiorpaints' element={<h1>Interior Paints</h1>} />
-          </Route>
+          <Route path='categories' element={<CategoryPage />} />
+          <Route path='categories/:id' element={<ProductDetail />} />
           <Route path='brands' element={<BrandPage />} />
           <Route path='Features/colorpreview' element={<Colorpreview />} />
           <Route path='Features/AllColorTemplate' element={<AllColorTemplate />} />

@@ -141,7 +141,7 @@ function Card() {
                 />
 
                 {/* CATEGORY */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-blue-600 shadow">
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-purple-600 shadow">
                   {item.category}
                 </div>
 
@@ -170,14 +170,14 @@ function Card() {
                   <span className="text-sm text-gray-400 line-through">
                     ₹3999
                   </span>
-                  <div className=" bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
+                  <div className=" bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
                     20% OFF
                   </div>
                 </div>
 
                 {/* RATING */}
                 <div className="flex items-center gap-2 mt-2">
-                  <div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-md font-semibold">
+                  <div className="bg-purple-500 text-white text-xs px-2 py-1 rounded-md font-semibold">
                     4.5 ★
                   </div>
 
@@ -191,7 +191,7 @@ function Card() {
                   {!cart[item.id] ? (
                     <button
                       onClick={() => addToCart(item.id)}
-                      className="w-full h-10 rounded-2xl bg-secondary hover:scale-[1.02] text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+                      className="w-full h-10 rounded-2xl bg-purple-700 hover:scale-[1.02] text-white font-semibold flex items-center justify-center gap-2 transition-all duration-300"
                     >
                       <ShoppingCart className="w-5 h-5" />
                       Add To Cart
