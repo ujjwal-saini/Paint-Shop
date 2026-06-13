@@ -35,10 +35,10 @@ function ProductDetail() {
           Home / Shop / Interior Paints
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-10">
 
           {/* Left Side */}
-          <div className="flex gap-4 h-[200px] lg:h-[370px]">
+          <div className="flex gap-4 h-[220px] lg:h-[370px]">
 
             {/* Thumbnails */}
             <div className="hidden sm:flex flex-col gap-3">
@@ -62,7 +62,7 @@ function ProductDetail() {
             </div>
 
             {/* Main Image */}
-            <div className="flex-1 bg-white lg:rounded-3xl lg:shadow px-4 py-2 relative">
+            <div className="flex-1  lg:rounded-3xl lg:shadow px-4 py-2 relative">
 
               <button className="absolute top-5 right-5">
                 <Heart />
@@ -83,7 +83,7 @@ function ProductDetail() {
               In Stock
             </span>
 
-            <h1 className="text-[16px] lg:text-2xl font-bold lg:mt-4">
+            <h1 className="text-[18px] lg:text-2xl font-bold lg:mt-4">
               ColorCraft Interior Emulsion Paint
             </h1>
 

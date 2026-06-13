@@ -109,7 +109,7 @@ function ProductCard({ products }) {
                   Add To Cart
                 </button>
               ) : (
-                <div className="flex items-center justify-between   rounded-xl px-3 py-2">
+                <div className="flex items-center justify-between bg-blue-600 text-white rounded-xl px-3 py-2">
                   <button
                     onClick={() => decreaseQty(product.id)}
                     className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-blue-700"
