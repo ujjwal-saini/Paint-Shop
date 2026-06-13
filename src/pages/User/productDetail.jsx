@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import {
-  Heart,
-  Star,
-  Minus,
-  Plus,
-  RefreshCcw,
-} from "lucide-react";
+import { Heart, Star, Minus, Plus, RefreshCcw, } from "lucide-react";
 
 function ProductDetail() {
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState(0);
+
+  const increaseQty = () => {
+    setQty((prev) => prev + 1);
+  };
+
+  const decreaseQty = () => {
+    setQty((prev) => Math.max(0, prev - 1));
+  };
+
+  const addToCart = () => {
+    setQty(1);
+  };
 
   const images = [
-    "/paint1.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-iUXq5QRtfVs0pIBqRVGjUi6gVcw2VJB5b_Sn5ESbhw&s=10",
     "/paint2.png",
     "/paint3.png",
     "/paint4.png",
@@ -22,17 +28,17 @@ function ProductDetail() {
   return (
     <div className="bg-slate-50 min-h-screen">
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-3 lg:py-8">
 
         {/* Breadcrumb */}
-        <p className="text-sm text-gray-500 mb-6">
+        <p className="text-sm text-gray-500 mb-1.5 lg:mb-6">
           Home / Shop / Interior Paints
         </p>
 
         <div className="grid lg:grid-cols-2 gap-10">
 
           {/* Left Side */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 h-[200px] lg:h-[370px]">
 
             {/* Thumbnails */}
             <div className="hidden sm:flex flex-col gap-3">
@@ -56,7 +62,7 @@ function ProductDetail() {
             </div>
 
             {/* Main Image */}
-            <div className="flex-1 bg-white rounded-3xl border p-8 relative">
+            <div className="flex-1 bg-white lg:rounded-3xl lg:shadow px-4 py-2 relative">
 
               <button className="absolute top-5 right-5">
                 <Heart />
@@ -65,7 +71,7 @@ function ProductDetail() {
               <img
                 src={activeImage}
                 alt=""
-                className="w-full h-[450px] object-contain"
+                className="w-full h-full lg:h-[300px] object-contain"
               />
             </div>
           </div>
@@ -73,53 +79,52 @@ function ProductDetail() {
           {/* Right Side */}
           <div>
 
-            <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+            <span className="hidden lg:inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
               In Stock
             </span>
 
-            <h1 className="text-4xl font-bold mt-4">
+            <h1 className="text-[16px] lg:text-2xl font-bold lg:mt-4">
               ColorCraft Interior Emulsion Paint
             </h1>
 
             {/* Rating */}
-            <div className="flex items-center gap-2 mt-3">
+            <div className="flex items-center gap-2 mt-2">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star
                     key={i}
-                    size={16}
-                    className="fill-yellow-400 text-yellow-400"
+                    className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400"
                   />
                 ))}
               </div>
 
-              <span className="text-gray-500">
+              <span className=" text-sm text-gray-500">
                 4.5 (128 Reviews)
               </span>
             </div>
 
             {/* Price */}
-            <div className="flex items-center gap-3 mt-5">
-              <h2 className="text-4xl font-bold text-blue-600">
-                PKR 4,500
+            <div className="flex items-center gap-3 mt-3">
+              <h2 className="text-sm lg:text-xl font-bold text-blue-600">
+                $ 4,500
               </h2>
 
-              <span className="line-through text-gray-400">
-                PKR 6,000
+              <span className="text-sm  line-through text-gray-400">
+                $ 6,000
               </span>
 
-              <span className="bg-green-100 text-green-700 px-2 py-1 rounded-md text-sm">
+              <span className="bg-green-100 text-green-700 px-2 py-1 rounded-md text-sm  ">
                 10% OFF
               </span>
             </div>
 
-            <p className="text-gray-600 mt-5">
+            <p className=" hidden lg:block text-gray-600 text-sm mt-3">
               High quality interior emulsion paint with
               smooth finish and long lasting protection.
             </p>
 
             {/* Features */}
-            <div className="grid grid-cols-2 gap-4 mt-6">
+            <div className="hidden lg:grid grid-cols-2 gap-2 mt-4 text-[12px]">
               <div>✓ Smooth Finish</div>
               <div>✓ Washable</div>
               <div>✓ Low Odor</div>
@@ -127,32 +132,32 @@ function ProductDetail() {
             </div>
 
             {/* Sizes */}
-            <div className="mt-8">
-              <h4 className="font-semibold mb-3">
+            <div className="mt-4">
+              <h4 className="font-semibold mb-2">
                 Size
               </h4>
 
               <div className="flex gap-3 flex-wrap">
-                <button className="border px-5 py-2 rounded-xl">
+                <button className="border px-3 py-2 rounded-xl">
                   1L
                 </button>
 
-                <button className="border-2 border-blue-600 text-blue-600 px-5 py-2 rounded-xl">
+                <button className="border-2 border-blue-600 text-blue-600 px-3 py-2 rounded-xl">
                   4L
                 </button>
 
-                <button className="border px-5 py-2 rounded-xl">
+                <button className="border px-3 py-2 rounded-xl">
                   10L
                 </button>
 
-                <button className="border px-5 py-2 rounded-xl">
+                <button className="border px-3 py-2 rounded-xl">
                   20L
                 </button>
               </div>
             </div>
 
             {/* Colors */}
-            <div className="mt-8">
+            <div className="mt-2">
               <h4 className="font-semibold mb-3">
                 Colors
               </h4>
@@ -165,42 +170,56 @@ function ProductDetail() {
               </div>
             </div>
 
-            {/* Quantity */}
-            <div className="mt-8 flex items-center gap-4">
+            <div
+              className="
+    fixed bottom-0 left-0 right-0
+    bg-white border-t p-3 z-50
+    flex gap-3
 
-              <div className="flex items-center border rounded-xl overflow-hidden">
+    md:static
+    md:bg-transparent
+    md:border-0
+    md:p-0
+    md:mt-8
+  "
+            >
+              {/* Cart Section */}
+              <div className="flex-1">
+                {qty === 0 ? (
+                  <button
+                    onClick={addToCart}
+                    className=" cursor-pointer w-full  hover:bg-blue-700
+                    hover:text-white text-blue-700 border py-3 rounded-xl font-medium transition"
+                  >
+                    Add To Cart
+                  </button>
+                ) : (
+                  <div className="flex items-center justify-between text-blue-700 border  rounded-xl px-4 py-3">
+                    <button
+                      onClick={decreaseQty}
+                      className="cursor-pointer p-1 rounded"
+                    >
+                      <Minus size={18} />
+                    </button>
 
-                <button
-                  onClick={() =>
-                    qty > 1 && setQty(qty - 1)
-                  }
-                  className="px-4 py-3"
-                >
-                  <Minus />
-                </button>
+                    <span className="font-semibold text-lg">
+                      {qty}
+                    </span>
 
-                <span className="px-6">
-                  {qty}
-                </span>
-
-                <button
-                  onClick={() =>
-                    setQty(qty + 1)
-                  }
-                  className="px-4 py-3"
-                >
-                  <Plus />
-                </button>
+                    <button
+                      onClick={increaseQty}
+                      className="cursor-pointer p-1 rounded"
+                    >
+                      <Plus size={18} />
+                    </button>
+                  </div>
+                )}
               </div>
 
-              <button className="flex-1 bg-blue-600 text-white py-3 rounded-xl font-medium">
-                Add To Cart
-              </button>
-
-              <button className="flex-1 bg-indigo-600 text-white py-3 rounded-xl font-medium">
+              {/* Buy Now */}
+              <button className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-xl font-medium transition cursor-pointer">
                 Buy Now
               </button>
-
             </div>
 
             {/* Wishlist */}
