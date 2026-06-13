@@ -189,7 +189,10 @@ function Navbar() {
                       </p>
                     </div>
                     <button
-                      onClick={() => setOpenLogin(true)}
+                      onClick={() => {
+                        setOpenLogin(true);
+                        setProfileOpen(false);
+                      }}
                       className=" bg-white text-purple-600 py-1 px-3 lg:px-5 lg:py-2 rounded-full font-semibold text-sm hover:scale-105 transition">
                       Login
                     </button>
@@ -221,6 +224,9 @@ function Navbar() {
                       <Link
                         key={item.name}
                         to={item.path}
+                        onClick={() => {
+                          setProfileOpen(false);
+                        }}
                         className="flex text-[14px] lg:text-[16px] items-center gap-3 lg:px-4 px-4 py-3 lg:py-4 rounded-2xl hover:bg-gray-100 transition font-medium text-gray-700"
                       >
                         {item.icon}
@@ -336,7 +342,7 @@ function Navbar() {
 
           </AnimatePresence>
         </motion.div>
-      </header>
+      </header >
 
       <div className="h-[130px]" />
 
@@ -346,25 +352,29 @@ function Navbar() {
         )}
       </AnimatePresence>
       {/* LOGIN MODAL */}
-      {openLogin && (
-        <Login
-          closeModal={() => setOpenLogin(false)}
-          openSignup={() => {
-            setOpenLogin(false);
-            setOpenSignup(true);
-          }}
-        />
-      )}
+      {
+        openLogin && (
+          <Login
+            closeModal={() => setOpenLogin(false)}
+            openSignup={() => {
+              setOpenLogin(false);
+              setOpenSignup(true);
+            }}
+          />
+        )
+      }
 
-      {openSignup && (
-        <Signup
-          closeModal={() => setOpenSignup(false)}
-          openLogin={() => {
-            setOpenSignup(false);
-            setOpenLogin(true);
-          }}
-        />
-      )}
+      {
+        openSignup && (
+          <Signup
+            closeModal={() => setOpenSignup(false)}
+            openLogin={() => {
+              setOpenSignup(false);
+              setOpenLogin(true);
+            }}
+          />
+        )
+      }
     </>
   );
 }

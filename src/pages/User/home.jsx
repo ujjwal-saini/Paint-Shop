@@ -4,6 +4,7 @@ import bg1 from '../../assets/bg1.png'
 import { motion } from "framer-motion";
 import { ShieldCheck, Truck, Headphones } from "lucide-react";
 import Navbar from './navbar';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -49,19 +50,21 @@ function Home() {
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: false }}
             className='flex my-3 sm:flex-row gap-2 lg:gap-4 lg:mt-6 md:mt-3 lg:mb-10 mt-3 lg:mt-0'>
-            <motion.button
+            <Link
+              to={"/categories"}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="hidden text-[10px] lg:block sm:text-[13px] md:text-[15px] lg:text-[16px] px-3 py-2 sm:px-6 sm:py-2.5
-               md:px-8 md:py-3 rounded-2xl bg-third text-white font-semibold shadow-lg">
+              className="text-[10px] lg:block sm:text-[13px] md:text-[15px] lg:text-[16px] px-4 py-2 sm:px-6 sm:py-2.5  rounded-[10px]
+               md:px-8 md:py-3  bg-third text-white font-semibold shadow-lg">
               Shop Now
-            </motion.button>
-            <motion.button
+            </Link>
+            <Link
+              to={"/Features/colorpreview"}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className='text-[10px] sm:text-[13px] md:text-[15px] lg:text-[16px] px-4 py-[9px] sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-[10px]  bg-purple-800 text-white font-semibold shadow-lg' >
               Try Color Preview
-            </motion.button>
+            </Link>
           </motion.div>
 
           <motion.div className="flex items-center gap-3 mt-5 lg:mt-0 "
